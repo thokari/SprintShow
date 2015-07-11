@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<script src="bower_components/Chart.js/Chart.min.js"> </script>
+<script>
+var data = [
+	    {
+		value: 50,
+		color:"#F7464A",
+		highlight: "#FF5A5E",
+		label: "Red"
+	    },
+	    {
+		value: 50,
+		color: "#46BFBD",
+		highlight: "#5AD3D1",
+		label: "Green"
+	    },
+	    {
+		value: 50,
+		color: "#FDB45C",
+		highlight: "#FFC870",
+		label: "Yellow"
+	    },
+	    {
+		value: 50,
+		color: "#987654",
+		highlight: "#45613",
+		label: "Wurst"
+	    }
+	]
+function doChart (data){
+	var ctx = document.getElementById("doChart").getContext("2d");
+	Chart.defaults.global = {
+		onAnimationComplete: function(){
+	
+		var pieChartData = this.segments;
+		var width = ctx.canvas.clientWidth;
+		var height = ctx.canvas.clientHeight;
+		var fontHightFactor = 30;
+		var fontHight = height/fontHightFactor; 
+		ctx.font= fontHight+"px Georgia";
+		var TopPos = (height/2) - ((pieChartData.length * fontHight)/2);
+		var yPos = TopPos;
+		var xPos = width/2;
+		for (i = 0; i < pieChartData.length; i++) {
+			ctx.fillStyle = pieChartData[i].fillColor;
+			var text = pieChartData[i].label +": "+  pieChartData[i].value
+    			ctx.fillText(text,xPos,yPos);
+			yPos += fontHight;
+		}
+		
+	}
+	};
+	
+	var myDoughnutChart = new Chart(ctx).Doughnut(data,{
+		percentageInnerCutout : 70,
+		segmentShowStroke: false,
+		animateRotate: false
+	});
+
+}
+</script>
+<head>
+<body onload="doChart(data)" bgcolor="#123123">
+<canvas id="doChart" width="600" height="600"></canvas>
+</body>
+</html>
