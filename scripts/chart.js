@@ -5,27 +5,27 @@ define([
 		],function (doughnut, line, sprintdata) {
 	return {
 	    renderCharts: function () {
-			var lastSprint = {
+	    	this.renderCurrentSprint();
+	    	this.renderSmallCurrentSprint();
+	    	this.renderSprintHistoryChart();
+	    },
+		renderCurrentSprint : function (){
+			doughnut.renderChart({
 				canvasName: "myChart",
 				data: sprintdata.getCurrentSprint()
-			};
-	    	this.renderDoughnutChart(lastSprint);
-	    	var stupidSprint = {
+			});
+		},
+		renderSmallCurrentSprint : function (){
+			doughnut.renderChart({
 				canvasName: "smallChart",
 				data: sprintdata.getCurrentSprint()
-			};
-	    	this.renderDoughnutChart(stupidSprint);
-	    	var sprintHistory = {
+			});
+		},
+		renderSprintHistoryChart : function (){
+			line.renderChart({
 				canvasName: "lineChart",
 				data: sprintdata.getCurrentSprint()
-			};
-	    	this.renderLineChart(sprintHistory);
-	    },
-		renderDoughnutChart : function (chartData){
-			doughnut.renderChart(chartData);
-		},
-		renderLineChart : function (chartData){
-			line.renderChart(chartData);
+			});
 		}
 	};
 });
