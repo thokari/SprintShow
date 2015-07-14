@@ -1,14 +1,9 @@
 define(['randomcolor','chartJS'],function (randomcolor) {
 	return {
-		canvasName: '',
-		setCanvasName: function (name){
-			this.canvasName = name;
-			return this;
-		},
 		renderChart: function(chartData){
-			var printData = this.generateDoughnutData(chartData.data);
+			//this.generateDoughnutLegend(chartData.canvasName);
 			var ctx = document.getElementById(chartData.canvasName).getContext("2d");
-			this.generateDoughnutLegend(chartData.canvasName);
+			var printData = this.processData(chartData.data);
 			
 			var myDoughnutChart = new Chart(ctx).Doughnut(printData,{
 				percentageInnerCutout : 70,
@@ -16,7 +11,7 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 				animateRotate: false
 			});
 		},
-		generateDoughnutData: function (rawData) {
+		processData: function (rawData) {
 			var data = [];
 			for (i = 0; i < rawData.length; i++) {
     			data.push(
@@ -40,10 +35,10 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 					var fontHightFactor = 30;
 					var fontHight = height/fontHightFactor; 
 					canvasContex.font= fontHight+"px Georgia";
-					var TopPos = 0;//(height/2) - ((pieChartData.length * fontHight)/2);
+					var TopPos = 0;
 					var yPos = TopPos + fontHight;
-					var xPos = 0  ;//width/2;
-					var blockSize = 10;
+					var xPos = 0  ;
+					var blockSize = height/50;
 					for (i = 0; i < pieChartData.length; i++) {
 						canvasContex.fillStyle = pieChartData[i].fillColor;
 						canvasContex.fillRect(xPos+fontHight-blockSize,yPos -blockSize, blockSize, blockSize)

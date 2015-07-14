@@ -1,7 +1,8 @@
 define([
 		"./charts/doughnut",
+		"./charts/line",
 		"./sprintdata"
-		],function (doughnut , sprintdata) {
+		],function (doughnut, line, sprintdata) {
 	return {
 	    renderCharts: function () {
 			var lastSprint = {
@@ -14,9 +15,17 @@ define([
 				data: sprintdata.getCurrentSprint()
 			};
 	    	this.renderDoughnutChart(stupidSprint);
+	    	var sprintHistory = {
+				canvasName: "lineChart",
+				data: sprintdata.getCurrentSprint()
+			};
+	    	this.renderLineChart(sprintHistory);
 	    },
 		renderDoughnutChart : function (chartData){
-			doughnut.setCanvasName(chartData.canvasName).renderChart(chartData);
+			doughnut.renderChart(chartData);
+		},
+		renderLineChart : function (chartData){
+			line.renderChart(chartData);
 		}
 	};
 });

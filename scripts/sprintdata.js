@@ -20,7 +20,7 @@ define(	function () {
 				},
 				{
 					storyPoints : 31,
-					title: "omg" 
+					title: "Doof-123 huhu das geht" 
 				}
 			];
 		}
