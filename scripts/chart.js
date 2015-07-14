@@ -5,6 +5,7 @@ define([
 		],function (doughnut, line, sprintdata) {
 	return {
 	    renderCharts: function () {
+	    	//this.setGlobalChartJSConfig();
 	    	this.renderCurrentSprint();
 	    	this.renderSmallCurrentSprint();
 	    	this.renderSprintHistoryChart();
@@ -24,8 +25,15 @@ define([
 		renderSprintHistoryChart : function (){
 			line.renderChart({
 				canvasName: "lineChart",
-				data: sprintdata.getCurrentSprint()
+				data: sprintdata.getSprintHistory()
 			});
+		},
+		setGlobalChartJSConfig : function (){
+			Chart.defaults.global = {
+				//animation: false,
+			};
+
 		}
+
 	};
 });

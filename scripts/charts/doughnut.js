@@ -18,7 +18,7 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 	    			{
 					value: rawData[i].storyPoints,
 					color: randomcolor({luminosity: 'bright',hue: 'blue'}),
-					highlight: randomcolor(),
+					highlight: randomcolor({luminosity: 'bright',hue: 'orange'}),
 					label: rawData[i].title
 				    }
 			    );
@@ -27,29 +27,6 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 		},
 		generateDoughnutLegend: function (canvasName) {
 			var canvasContex = document.getElementById(canvasName+"Legend").getContext("2d");
-			Chart.defaults.global = {
-				onAnimationComplete: function(){	
-					var pieChartData = this.segments;
-					var width = canvasContex.canvas.clientWidth;
-					var height = canvasContex.canvas.clientHeight;
-					var fontHightFactor = 30;
-					var fontHight = height/fontHightFactor; 
-					canvasContex.font= fontHight+"px Georgia";
-					var TopPos = 0;
-					var yPos = TopPos + fontHight;
-					var xPos = 0  ;
-					var blockSize = height/50;
-					for (i = 0; i < pieChartData.length; i++) {
-						canvasContex.fillStyle = pieChartData[i].fillColor;
-						canvasContex.fillRect(xPos+fontHight-blockSize,yPos -blockSize, blockSize, blockSize)
-						canvasContex.fillStyle = '#D4D4D4';
-						var text = pieChartData[i].label +": ("+  pieChartData[i].value +")";
-			    		canvasContex.fillText(text,xPos + fontHight + 3,yPos);
-						yPos += fontHight;
-					}
-				
-				}
-			};
 		}
 	};
 });

@@ -2,33 +2,55 @@ define(['chartJS'],function () {
 	return {
 		renderChart: function(chartData){
 			var lineChartContex = document.getElementById(chartData.canvasName).getContext("2d");
-			var myLineChart = new Chart(lineChartContex).Line(this.processData(),{
+			var myLineChart = new Chart(lineChartContex).Line(this.processData(chartData.data),{
 				scaleGridLineColor : '#303030'
 			});
 		},
 		processData: function (rawData) {
+
+			var labels = [];
+    		var promised = [];
+    		var completed = [];
+    		var pulled = [];
+    		for (i = 0; i < rawData.length; i++) {
+    			labels.push(rawData[i].sprintName);
+    			var storyPoints = rawData[i].storyPoints;
+    			promised.push(storyPoints.promised);
+    			completed.push(storyPoints.completed);
+    			pulled.push(storyPoints.pulled);
+    		}
 			var data = {
-			    labels: ["January", "February", "March", "April", "May", "June", "July"],
+				labels: labels,
 			    datasets: [
 			        {
-			            label: "My First dataset",
-			            fillColor: "rgba(220,220,220,0.2)",
-			            strokeColor: "rgba(220,220,220,1)",
-			            pointColor: "rgba(220,220,220,1)",
+			            label: "promised",
+			            fillColor: "rgba(255,0,0,0.1)",
+			            strokeColor: "rgba(255,0,0,1)",
+			            pointColor: "rgba(255,0,0,1)",
 			            pointStrokeColor: "#fff",
 			            pointHighlightFill: "#fff",
 			            pointHighlightStroke: "rgba(220,220,220,1)",
-			            data: [65, 59, 80, 81, 56, 55, 40]
+			            data: promised
 			        },
 			        {
-			            label: "My Second dataset",
+			            label: "completed",
+			            fillColor: "rgba(0,255,0,0.1)",
+			            strokeColor: "rgba(0,255,0,1)",
+			            pointColor: "rgba(0,255,0,1)",
+			            pointStrokeColor: "#fff",
+			            pointHighlightFill: "#fff",
+			            pointHighlightStroke: "rgba(151,187,205,1)",
+			            data: completed
+			        },
+			        {
+			            label: "pulled",
 			            fillColor: "rgba(151,187,205,0.2)",
 			            strokeColor: "rgba(151,187,205,1)",
 			            pointColor: "rgba(151,187,205,1)",
 			            pointStrokeColor: "#fff",
 			            pointHighlightFill: "#fff",
 			            pointHighlightStroke: "rgba(151,187,205,1)",
-			            data: [28, 48, 40, 19, 86, 27, 90]
+			            data: pulled
 			        }
 			    ]
 			};
