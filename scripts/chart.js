@@ -4,11 +4,16 @@ define([
 		],function (doughnut , sprintdata) {
 	return {
 	    renderCharts: function () {
-			var lastSprints = {
+			var lastSprint = {
 				canvasName: "myChart",
 				data: sprintdata.getCurrentSprint()
 			};
-	    	this.renderDoughnutChart(lastSprints);
+	    	this.renderDoughnutChart(lastSprint);
+	    	var stupidSprint = {
+				canvasName: "smallChart",
+				data: sprintdata.getCurrentSprint()
+			};
+	    	this.renderDoughnutChart(stupidSprint);
 	    },
 		renderDoughnutChart : function (chartData){
 			doughnut.setCanvasName(chartData.canvasName).renderChart(chartData);
