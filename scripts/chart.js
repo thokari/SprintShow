@@ -6,12 +6,12 @@ define([
 	return {
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
-	    	this.renderCurrentSprint();
+	    	this.renderTaskDistribution();
 	    	this.renderSprintHistoryChart();
 	    },
-		renderCurrentSprint : function (){
+		renderTaskDistribution : function (){
 			doughnut.renderChart({
-				canvasName: "currentSprint",
+				canvasName: "taskDistribution",
 				data: sprintdata.getCurrentSprint()
 			});
 		},
