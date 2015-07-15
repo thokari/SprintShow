@@ -5,7 +5,7 @@ requirejs.config({
         scripts: '../scripts',
     	sprintdata: 'scripts/sprintdata',
         charts: '../scripts/charts',
-        chartJS: bowerLibary + '/Chart.js/Chart',
+        chartJS: bowerLibary + '/Chart.js/Chart.min',
         randomcolor: bowerLibary + '/randomcolor/randomColor'
     }
 });

@@ -3,59 +3,91 @@ define(	function () {
 		getCurrentSprint: function () {
 			return [
 				{
-					storyPoints : 5,
-					title: "AD-1234 PayPalPlus wurst" 
+					title: "PayPal Plus",
+					storyPoints : 25
 				},
 				{
-					storyPoints : 13,
-					title: "AD-9521 jajageanu" 
+					title: "ToolsVM",
+					storyPoints : 2
 				},
 				{
-					storyPoints : 5,
-					title: "EPG-1234 och nein schonwieder" 
+					title: "EasyMarketing",
+					storyPoints : 3
 				},
 				{
-					storyPoints : 5,
-					title: "AD-21254 nope" 
+					title: "iPayment",
+					storyPoints : 4
 				},
 				{
-					storyPoints : 31,
-					title: "Doof-123 huhu das geht" 
+					title: "Jenkins",
+					storyPoints : 5
 				}
 			];
 		},
 		getSprintHistory: function (){
 			return [
 				{
-					sprintName: "Sprint 1",
+					sprintName: "Sprint 8",
+								storyPoints: {
+									promised: "30",
+									leftOvers: "25",
+									pulled: "9"
+								}
+				},
+				{
+					sprintName: "Sprint 7",
+								storyPoints: {
+									promised: "24",
+									leftOvers: "5",
+									pulled: "13"
+								}
+				},
+				{
+					sprintName: "Sprint 6",
+								storyPoints: {
+									promised: "29",
+									leftOvers: "5",
+									pulled: "0"
+								}
+				},
+				{
+					sprintName: "Sprint 5",
+								storyPoints: {
+									promised: "35",
+									leftOvers: "0",
+									pulled: "0"
+								}
+				},
+				{
+					sprintName: "Sprint 4",
 								storyPoints: {
 									promised: "32",
-									completed: "25",
-									pulled: "5",
+									leftOvers: "0",
+									pulled: "0"
+								}
+				},
+				{
+					sprintName: "Sprint 3",
+								storyPoints: {
+									promised: "35",
+									leftOvers: "26",
+									pulled: "13"
 								}
 				},
 				{
 					sprintName: "Sprint 2",
 								storyPoints: {
-									promised: "25",
-									completed: "35",
-									pulled: "10",
+									promised: "49",
+									leftOvers: "16",
+									pulled: "0"
 								}
 				},
 				{
-					sprintName: "New Team 1",
+					sprintName: "Sprint 1",
 								storyPoints: {
-									promised: "35",
-									completed: "10",
-									pulled: "0",
-								}
-				},
-				{
-					sprintName: "New Team 1 sprint 2",
-								storyPoints: {
-									promised: "20",
-									completed: "55",
-									pulled: "35",
+									promised: "39",
+									leftOvers: "31",
+									pulled: "5"
 								}
 				}
 			];
