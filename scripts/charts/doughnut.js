@@ -17,8 +17,8 @@ define(['randomcolor','chartJS'],function (randomcolor) {
     			data.push(
 	    			{
 					value: rawData[i].storyPoints,
-					color: randomcolor({luminosity: 'bright',hue: 'blue'}),
-					highlight: randomcolor({luminosity: 'bright',hue: 'orange'}),
+					color: randomcolor({luminosity: 'bright', hue: 'blue'}),
+					highlight: randomcolor({luminosity: 'bright', hue: 'orange'}),
 					label: rawData[i].title
 				    }
 			    );
