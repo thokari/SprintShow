@@ -10,7 +10,7 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 				segmentShowStroke: false,
 				animateRotate: false
 			});
-			this.generateDoughnutLegend(chartData);
+			this.generateLegend(chartData);
 		},
 		processData: function (rawData) {
 			var data = [];
@@ -26,7 +26,7 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 			}
 			return data;
 		},
-		generateDoughnutLegend: function (chartData) {
+		generateLegend: function (chartData) {
 			var canvas = document.getElementById(chartData.canvasName+"Legend");
 			var canvasContex = canvas.getContext("2d");
 			var height = canvas.height;
@@ -46,9 +46,6 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 				canvasContex.fillStyle = '#c7c7c7';
 				var text = rawData[i].title + " ( "+rawData[i].storyPoints+" )";
 				canvasContex.fillText(text,xPos + blockSize + spacer, yPos + blockSize);
-    				rawData[i].title;
-    				rawData[i].storyPoints;
-				
 				yPos += blockSize + spacer;
 			}
 			
