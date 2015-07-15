@@ -3,24 +3,24 @@ define(	function () {
 		getCurrentSprint: function () {
 			return [
 				{
-					title: "PayPal Plus" 
-					storyPoints : 25,
+					title: "PayPal Plus",
+					storyPoints : 25
 				},
 				{
-					title: "ToolsVM" 
-					storyPoints : 2,
+					title: "ToolsVM",
+					storyPoints : 2
 				},
 				{
-					title: "EasyMarketing" 
-					storyPoints : 3,
+					title: "EasyMarketing",
+					storyPoints : 3
 				},
 				{
-					title: "iPayment" 
-					storyPoints : 4,
+					title: "iPayment",
+					storyPoints : 4
 				},
 				{
-					title: "Jenkins" 
-					storyPoints : 5,
+					title: "Jenkins",
+					storyPoints : 5
 				}
 			];
 		},
@@ -31,7 +31,7 @@ define(	function () {
 								storyPoints: {
 									promised: "30",
 									leftOvers: "25",
-									pulled: "9",
+									pulled: "9"
 								}
 				},
 				{
@@ -39,7 +39,7 @@ define(	function () {
 								storyPoints: {
 									promised: "24",
 									leftOvers: "5",
-									pulled: "13",
+									pulled: "13"
 								}
 				},
 				{
@@ -47,7 +47,7 @@ define(	function () {
 								storyPoints: {
 									promised: "29",
 									leftOvers: "5",
-									pulled: "0",
+									pulled: "0"
 								}
 				},
 				{
@@ -55,7 +55,7 @@ define(	function () {
 								storyPoints: {
 									promised: "35",
 									leftOvers: "0",
-									pulled: "0",
+									pulled: "0"
 								}
 				},
 				{
@@ -63,7 +63,7 @@ define(	function () {
 								storyPoints: {
 									promised: "32",
 									leftOvers: "0",
-									pulled: "0",
+									pulled: "0"
 								}
 				},
 				{
@@ -71,7 +71,7 @@ define(	function () {
 								storyPoints: {
 									promised: "35",
 									leftOvers: "26",
-									pulled: "13",
+									pulled: "13"
 								}
 				},
 				{
@@ -79,7 +79,7 @@ define(	function () {
 								storyPoints: {
 									promised: "49",
 									leftOvers: "16",
-									pulled: "0",
+									pulled: "0"
 								}
 				},
 				{
@@ -87,7 +87,7 @@ define(	function () {
 								storyPoints: {
 									promised: "39",
 									leftOvers: "31",
-									pulled: "5",
+									pulled: "5"
 								}
 				}
 			];
