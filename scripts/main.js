@@ -1,5 +1,6 @@
-define(function (require) {
-    require('./chart').renderCharts();
+define(['./chart','./presentation'],function (chart, presentation) {
+    chart.renderCharts();
+	presentation.hello();
 /*
 */
 });

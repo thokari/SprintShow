@@ -7,24 +7,17 @@ define([
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
 	    	this.renderCurrentSprint();
-	    	this.renderSmallCurrentSprint();
 	    	this.renderSprintHistoryChart();
 	    },
 		renderCurrentSprint : function (){
 			doughnut.renderChart({
-				canvasName: "myChart",
-				data: sprintdata.getCurrentSprint()
-			});
-		},
-		renderSmallCurrentSprint : function (){
-			doughnut.renderChart({
-				canvasName: "smallChart",
+				canvasName: "currentSprint",
 				data: sprintdata.getCurrentSprint()
 			});
 		},
 		renderSprintHistoryChart : function (){
 			line.renderChart({
-				canvasName: "lineChart",
+				canvasName: "history",
 				data: sprintdata.getSprintHistory()
 			});
 		},
