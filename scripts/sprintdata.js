@@ -27,42 +27,18 @@ define(	function () {
 		getSprintHistory: function (){
 			return [
 				{
-					sprintName: "Sprint 8",
+					sprintName: "Sprint 1",
 								storyPoints: {
-									promised: "30",
-									leftOvers: "25",
-									pulled: "9"
+									promised: "39",
+									leftOvers: "31",
+									pulled: "5"
 								}
 				},
 				{
-					sprintName: "Sprint 7",
+					sprintName: "Sprint 2",
 								storyPoints: {
-									promised: "24",
-									leftOvers: "5",
-									pulled: "13"
-								}
-				},
-				{
-					sprintName: "Sprint 6",
-								storyPoints: {
-									promised: "29",
-									leftOvers: "5",
-									pulled: "0"
-								}
-				},
-				{
-					sprintName: "Sprint 5",
-								storyPoints: {
-									promised: "35",
-									leftOvers: "0",
-									pulled: "0"
-								}
-				},
-				{
-					sprintName: "Sprint 4",
-								storyPoints: {
-									promised: "32",
-									leftOvers: "0",
+									promised: "49",
+									leftOvers: "16",
 									pulled: "0"
 								}
 				},
@@ -75,21 +51,46 @@ define(	function () {
 								}
 				},
 				{
-					sprintName: "Sprint 2",
+					sprintName: "Sprint 4",
 								storyPoints: {
-									promised: "49",
-									leftOvers: "16",
+									promised: "32",
+									leftOvers: "0",
 									pulled: "0"
 								}
 				},
 				{
-					sprintName: "Sprint 1",
+					sprintName: "Sprint 5",
 								storyPoints: {
-									promised: "39",
-									leftOvers: "31",
-									pulled: "5"
+									promised: "35",
+									leftOvers: "0",
+									pulled: "0"
+								}
+				},
+				{
+					sprintName: "Sprint 6",
+								storyPoints: {
+									promised: "29",
+									leftOvers: "5",
+									pulled: "0"
+								}
+				},
+				{
+					sprintName: "Sprint 7",
+								storyPoints: {
+									promised: "24",
+									leftOvers: "5",
+									pulled: "13"
+								}
+				},
+				{
+					sprintName: "Sprint 8",
+								storyPoints: {
+									promised: "30",
+									leftOvers: "22",
+									pulled: "9"
 								}
 				}
+
 			];
 		}
 	};
