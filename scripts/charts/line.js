@@ -20,6 +20,7 @@ define(['chartJS'],function () {
 	    			pulled.push(storyPoints.pulled);
 	    			completed.push( parseInt(storyPoints.promised) + parseInt(storyPoints.pulled) - parseInt(storyPoints.leftOvers));
 	    		}
+			var average = this.calcAverage(completed); 
 			var data = {
 				labels: labels,
 			    datasets: [
@@ -52,6 +53,16 @@ define(['chartJS'],function () {
 					    pointHighlightFill: "#fff",
 					    pointHighlightStroke: "rgba(151,187,205,1)",
 					    data: pulled
+					},
+					{
+					    label: "average",
+					    fillColor: "rgba(120,120,120,0)",
+					    strokeColor: "rgba(120,120,120,1)",
+					    pointColor: "rgba(120,120,120,1)",
+					    pointStrokeColor: "#fff",
+					    pointHighlightFill: "#fff",
+					    pointHighlightStroke: "rgba(151,187,205,1)",
+					    data: average
 					}
 			    ]
 			};
@@ -90,6 +101,18 @@ define(['chartJS'],function () {
 			canvasContex.fillText("pulled",xPos + blockSize + spacer, yPos + blockSize);
 			yPos += blockSize + spacer;
 		},
+		calcAverage: function (completed) {
+			var completedSum = 0;
+			for (i = 0; i < completed.length; i++) {
+				completedSum += completed[i];
+			}
+			var averageValue = completedSum / completed.length;
+			var average = [];
+			for (i = 0; i < completed.length; i++) {
+				average.push(averageValue);
+			}
+			return average;
+		}
 
 	}
 });
