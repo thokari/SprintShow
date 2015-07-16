@@ -6,25 +6,18 @@ define([
 	return {
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
-	    	this.renderCurrentSprint();
-	    	this.renderSmallCurrentSprint();
+	    	this.renderTaskDistribution();
 	    	this.renderSprintHistoryChart();
 	    },
-		renderCurrentSprint : function (){
+		renderTaskDistribution : function (){
 			doughnut.renderChart({
-				canvasName: "myChart",
-				data: sprintdata.getCurrentSprint()
-			});
-		},
-		renderSmallCurrentSprint : function (){
-			doughnut.renderChart({
-				canvasName: "smallChart",
+				canvasName: "taskDistribution",
 				data: sprintdata.getCurrentSprint()
 			});
 		},
 		renderSprintHistoryChart : function (){
 			line.renderChart({
-				canvasName: "lineChart",
+				canvasName: "history",
 				data: sprintdata.getSprintHistory()
 			});
 		},
