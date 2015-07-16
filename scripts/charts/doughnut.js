@@ -2,7 +2,7 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 	return {
 		renderChart: function(chartData){
 			var ctx = document.getElementById(chartData.canvasName).getContext("2d");
-			this.addColorsToData(chartData.data);
+			this.addColorsToData(chartData.data, chartData.colorType);
 			var printData = this.processData(chartData.data);
 			console.log(printData);
 			var myDoughnutChart = new Chart(ctx).Doughnut(printData,{
@@ -50,10 +50,10 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 			}
 			
 		},
-		addColorsToData: function (rawData) {
+		addColorsToData: function (rawData, colorType) {
 			for (i = 0; i < rawData.length; i++) {
-				rawData[i].color = randomcolor({luminosity: 'bright',hue: 'blue'});
-				rawData[i].highcolor = randomcolor({luminosity: 'bright',hue: 'orange'});
+				rawData[i].color = randomcolor({luminosity: 'bright',hue: colorType.base});
+				rawData[i].highcolor = randomcolor({luminosity: 'bright',hue: colorType.highcolor});
 			}
 			return rawData;
 		}

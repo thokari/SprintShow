@@ -7,12 +7,27 @@ define([
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
 	    	this.renderTaskDistribution();
+		this.renderTypeDistribution();
 	    	this.renderSprintHistoryChart();
 	    },
 		renderTaskDistribution : function (){
 			doughnut.renderChart({
 				canvasName: "taskDistribution",
-				data: sprintdata.getCurrentSprint()
+				data: sprintdata.getCurrentSprint(),
+				colorType: {
+					base: 'blue',
+					highcolor: 'orange'
+				}
+			});
+		},
+		renderTypeDistribution : function (){
+			doughnut.renderChart({
+				canvasName: "typeDistribution",
+				data: sprintdata.getCurrentSprintTypes(),
+				colorType: {
+					base: 'green',
+					highcolor: 'red'
+				}
 			});
 		},
 		renderSprintHistoryChart : function (){

@@ -24,6 +24,30 @@ define(	function () {
 				}
 			];
 		},
+		getCurrentSprintTypes: function () {
+			return [
+				{
+					title: "Bug",
+					storyPoints : 6
+				},
+				{
+					title: "Task",
+					storyPoints : 8
+				},
+				{
+					title: "Story",
+					storyPoints : 18
+				},
+				{
+					title: "Improvment",
+					storyPoints : 2
+				},
+				{
+					title: "Reseach",
+					storyPoints : 5
+				}
+			];
+		},
 		getSprintHistory: function (){
 			return [
 				{
