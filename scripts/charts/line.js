@@ -100,6 +100,13 @@ define(['chartJS'],function () {
 			canvasContex.fillStyle = '#c7c7c7';
 			canvasContex.fillText("pulled",xPos + blockSize + spacer, yPos + blockSize);
 			yPos += blockSize + spacer;
+			// grey block color block
+			canvasContex.fillStyle = "#787878";
+			canvasContex.fillRect(xPos,yPos,blockSize,blockSize);
+			// text
+			canvasContex.fillStyle = '#c7c7c7';
+			canvasContex.fillText("average",xPos + blockSize + spacer, yPos + blockSize);
+			yPos += blockSize + spacer;
 		},
 		calcAverage: function (completed) {
 			var completedSum = 0;
