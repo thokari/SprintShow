@@ -110,7 +110,7 @@ define(	function () {
 					sprintName: "Sprint 8",
 								storyPoints: {
 									promised: "30",
-									leftOvers: "20",
+									leftOvers: "13",
 									pulled: "9"
 								}
 				}
