@@ -4,47 +4,43 @@ define(	function () {
 			return [
 				{
 					title: "PayPal Plus",
-					storyPoints : 25
+					storyPoints : 35
 				},
 				{
-					title: "ToolsVM",
-					storyPoints : 2
+					title: "Paypal Express",
+					storyPoints : 6
+				},
+				{
+					title: "Avatax",
+					storyPoints : 0
 				},
 				{
 					title: "EasyMarketing",
-					storyPoints : 3
+					storyPoints : 0
 				},
-				{
-					title: "iPayment",
-					storyPoints : 4
-				},
-				{
-					title: "Jenkins",
-					storyPoints : 5
-				}
 			];
 		},
 		getCurrentSprintTypes: function () {
 			return [
 				{
 					title: "Bug",
-					storyPoints : 6
+					storyPoints : 3
 				},
 				{
 					title: "Task",
-					storyPoints : 8
+					storyPoints : 16
 				},
 				{
 					title: "Story",
-					storyPoints : 18
+					storyPoints : 16
 				},
 				{
 					title: "Improvment",
-					storyPoints : 2
+					storyPoints : 3
 				},
 				{
 					title: "Reseach",
-					storyPoints : 5
+					storyPoints : 3
 				}
 			];
 		},
@@ -112,6 +108,14 @@ define(	function () {
 									promised: "30",
 									leftOvers: "8",
 									pulled: "9"
+								}
+				},
+				{
+					sprintName: "Sprint 9",
+								storyPoints: {
+									promised: "41",
+									leftOvers: "24",
+									pulled: "0"
 								}
 				}
 
