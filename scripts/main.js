@@ -1,3 +1,3 @@
-define(['./chart'],function (chart, presentation) {
+define(['./chart'],function (chart) {
     chart.renderCharts();
 });
