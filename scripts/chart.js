@@ -8,7 +8,9 @@ define([
 	    	//this.setGlobalChartJSConfig();
 	    	this.renderTaskDistribution();
 		this.renderTypeDistribution();
-	    	this.renderSprintHistoryChart();
+		$.get( "http://localhost:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
+		    	this.renderSprintHistoryChart(sprintHistoryData);
+		});
 	    },
 		renderTaskDistribution : function (){
 			doughnut.renderChart({
@@ -30,10 +32,10 @@ define([
 				}
 			});
 		},
-		renderSprintHistoryChart : function (){
+		renderSprintHistoryChart : function (sprintHistoryData){
 			line.renderChart({
 				canvasName: "history",
-				data: sprintdata.getSprintHistory()
+				data: sprintHistoryData
 			});
 		},
 		setGlobalChartJSConfig : function (){
