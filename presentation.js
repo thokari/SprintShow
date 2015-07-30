@@ -7,7 +7,8 @@ requirejs.config({
         charts: '../scripts/charts',
         chartJS: bowerLibary + '/Chart.js/Chart.min',
         randomcolor: bowerLibary + '/randomcolor/randomColor',
-        revealJS: bowerLibary + '/reveal-js/js/reveal.min'
+        revealJS: bowerLibary + '/reveal-js/js/reveal.min',
+	jquery: bowerLibary + 'jquery/dist/jquery.min'
     }
 });
 

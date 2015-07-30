@@ -1,14 +1,15 @@
 define([
 		"./charts/doughnut",
 		"./charts/line",
-		"./sprintdata"
-		],function (doughnut, line, sprintdata) {
+		"./sprintdata",
+		"./jquery"
+		],function (doughnut, line, sprintdata, jquery) {
 	return {
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
 	    	this.renderTaskDistribution();
 		this.renderTypeDistribution();
-		$.get( "http://localhost:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
+		jquery.get( "http://localhost:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
 		    	this.renderSprintHistoryChart(sprintHistoryData);
 		});
 	    },
