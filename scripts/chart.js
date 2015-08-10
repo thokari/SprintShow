@@ -7,27 +7,27 @@ define([
 	return {
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
-	    	this.renderTaskDistribution();
-		this.renderTypeDistribution();
 		var that = this;
-		$.get( "http://trident.vm-intern.epages.com:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
+		$.get( "http://localhost:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
 		    	that.renderSprintHistoryChart(sprintHistoryData);
+          that.renderTaskDistribution(sprintHistoryData);
+          that.renderTypeDistribution(sprintHistoryData);
 		});
 	    },
-		renderTaskDistribution : function (){
+		renderTaskDistribution : function (sprintHistoryData){
 			doughnut.renderChart({
 				canvasName: "taskDistribution",
-				data: sprintdata.getCurrentSprint(),
+			  data: sprintHistoryData[sprintHistoryData.length-1].topicDistribution,
 				colorType: {
 					base: 'blue',
 					highcolor: 'orange'
 				}
 			});
 		},
-		renderTypeDistribution : function (){
+		renderTypeDistribution : function (sprintHistoryData){
 			doughnut.renderChart({
 				canvasName: "typeDistribution",
-				data: sprintdata.getCurrentSprintTypes(),
+				data: sprintHistoryData[sprintHistoryData.length-1].typeDistribution,
 				colorType: {
 					base: 'green',
 					highcolor: 'red'
