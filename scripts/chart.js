@@ -8,7 +8,7 @@ define([
 	    renderCharts: function () {
 	    	//this.setGlobalChartJSConfig();
 		var that = this;
-		$.get( "http://localhost:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
+		$.get( "http://trident.vm-intern.epages.com:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
 		    	that.renderSprintHistoryChart(sprintHistoryData);
           that.renderTaskDistribution(sprintHistoryData);
           that.renderTypeDistribution(sprintHistoryData);
