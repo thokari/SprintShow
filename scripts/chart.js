@@ -9,6 +9,7 @@ define([
 	    	//this.setGlobalChartJSConfig();
 		var that = this;
 		$.get( "http://trident.vm-intern.epages.com:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
+          $(".SprintName").text(sprintHistoryData[sprintHistoryData.length-1].sprintName);
 		    	that.renderSprintHistoryChart(sprintHistoryData);
           that.renderTaskDistribution(sprintHistoryData);
           that.renderTypeDistribution(sprintHistoryData);
