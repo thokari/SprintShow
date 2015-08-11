@@ -11,8 +11,9 @@ define([
 		$.get( "http://trident.vm-intern.epages.com:3001/jiradata/sprinthistory", function( sprintHistoryData ) {
           $(".SprintName").text(sprintHistoryData[sprintHistoryData.length-1].sprintName);
           var sprintGoals = sprintHistoryData[sprintHistoryData.length-1].sprintGoals;
-          for(var i=0; i<sprintGoals.length; i++) {
-            $(".sprint_goals").append("<p>" + sprintGoals[i] + "</p>");
+          var num_sprints = sprintGoals==undefined?0:sprintGoals.length;
+          for(var i=0; i<num_sprints; i++) {
+            $(".sprint_goals").append("<li>" + sprintGoals[i].summary + "[<a href='https://epages.atlassian.net/browse/" + sprintGoals[i].key + "'>" + sprintGoals[i].key + "</a>]" + "</li>");
           }
           
 		    	that.renderSprintHistoryChart(sprintHistoryData);
