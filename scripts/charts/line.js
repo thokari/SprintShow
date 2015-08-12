@@ -115,7 +115,8 @@ define(['chartJS'],function () {
 			}
 			var averageValue = completedSum / completed.length;
 			var average = [];
-			for (i = 0; i < completed.length; i++) {
+			// don´t count the current sprint
+			for (i = 0; i < completed.length -1; i++) {
 				average.push(averageValue);
 			}
 			return average;
