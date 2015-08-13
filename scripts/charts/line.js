@@ -110,13 +110,14 @@ define(['chartJS'],function () {
 		},
 		calcAverage: function (completed) {
 			var completedSum = 0;
-			for (i = 0; i < completed.length; i++) {
+			var countLastSprints = completed.length -1; // don´t count the current sprint
+			for (i = 0; i < countLastSprints; i++) {
 				completedSum += completed[i];
 			}
 			var averageValue = completedSum / completed.length;
 			var average = [];
-			// don´t count the current sprint
-			for (i = 0; i < completed.length -1; i++) {
+			
+			for (i = 0; i < countLastSprints; i++) {
 				average.push(averageValue);
 			}
 			return average;
