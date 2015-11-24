@@ -16,11 +16,11 @@ define(['chartJS'],function () {
 	    		for (i = 0; i < rawData.length; i++) {
 	    			labels.push(rawData[i].sprintName);
 	    			var storyPoints = rawData[i].storyPoints;
-	    			promised.push(storyPoints.promised);
+	    			promised.push(parseInt(storyPoints.promised)-parseInt(storyPoints.pulled));
 	    			pulled.push(storyPoints.pulled);
-	    			completed.push( parseInt(storyPoints.promised) + parseInt(storyPoints.pulled) - parseInt(storyPoints.leftOvers));
+	    			completed.push( storyPoints.completed );
 	    		}
-			var average = this.calcAverage(completed); 
+			var average = this.calcAverage(completed);
 			var data = {
 				labels: labels,
 			    datasets: [
@@ -111,15 +111,12 @@ define(['chartJS'],function () {
 		calcAverage: function (completed) {
 			var completedSum = 0;
 			var countLastSprints = completed.length -1; // don´t count the current sprint
-			for (i = 0; i < countLastSprints; i++) {
-				completedSum += completed[i];
-			}
-			var averageValue = completedSum / completed.length;
 			var average = [];
-			
-			for (i = 0; i < countLastSprints; i++) {
-				average.push(averageValue);
-			}
+                        for (i = 0; i < countLastSprints; i++) {
+				completedSum += parseInt(completed[i]);
+			        var averageValue = completedSum / (i+1);
+                                average.push(averageValue);
+                        }
 			return average;
 		}
 
