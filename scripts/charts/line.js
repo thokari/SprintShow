@@ -16,7 +16,7 @@ define(['chartJS'],function () {
 	    		for (i = 0; i < rawData.length; i++) {
 	    			labels.push(rawData[i].sprintName);
 	    			var storyPoints = rawData[i].storyPoints;
-	    			promised.push(parseInt(storyPoints.promised)-parseInt(storyPoints.pulled));
+	    			promised.push(storyPoints.promised);
 	    			pulled.push(storyPoints.pulled);
 	    			completed.push( storyPoints.completed );
 	    		}
