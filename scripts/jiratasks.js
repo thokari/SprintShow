@@ -1,5 +1,5 @@
 define(function () {
-	var jiraTasks = [
+	return [
 	{
 		id:"UNITY-3422",
 		name:"REST-API: Add product attribute (page) title",
@@ -55,4 +55,4 @@ define(function () {
 		platforms:["ePagesJ", "ePages6"]
 	}
 	];
-};
+});
