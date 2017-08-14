@@ -1,16 +1,16 @@
-define(['randomcolor','chartJS'],function (randomcolor) {
+define(function () {
 	return {
-		renderChart: function(chartData){
+		renderChart: function (chartData) {
 			var ctx = document.getElementById(chartData.canvasName).getContext("2d");
 			this.addColorsToData(chartData.data, chartData.colorType);
-			var printData = this.processData(chartData.data);
-			console.log(printData);
-			var myDoughnutChart = new Chart(ctx).Doughnut(printData,{
+			//var printData = this.processData(chartData.data);
+			//console.log(printData);
+			var myDoughnutChart = new Chart(ctx).Doughnut(chartData,{
 				percentageInnerCutout : 70,
 				segmentShowStroke: false,
 				animateRotate: false
 			});
-			this.generateLegend(chartData);
+			//this.generateLegend(chartData);
 		},
 		processData: function (rawData) {
 			var data = [];
@@ -50,11 +50,14 @@ define(['randomcolor','chartJS'],function (randomcolor) {
 			}
 			
 		},
+
 		addColorsToData: function (rawData, colorType) {
-			for (i = 0; i < rawData.length; i++) {
-				rawData[i].color = randomcolor({luminosity: 'bright',hue: colorType.base});
-				rawData[i].highcolor = randomcolor({luminosity: 'bright',hue: colorType.highcolor});
+			
+			for (var i = 0; i < rawData.datasets.length; i++) {
+				rawData.datasets[i].backgroundColor = randomcolor({luminosity: 'bright',hue: colorType.base});
+				rawData.datasets[i].borderColor = randomcolor({luminosity: 'bright',hue: colorType.highcolor});
 			}
+			
 			return rawData;
 		}
 	};
