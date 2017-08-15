@@ -21,7 +21,7 @@
         <section>
           <h2>Sprint review 1</h2>
           <h3><span id="TeamName"></span>&#x221e; Team Infinity &#x221e;</h3>
-          <img class="plain"  src="https://media-api.atlassian.io/file/d27c1016-569b-4fda-8b44-4b64eac5b168/image?mode=full-fit&client=692c0ceb-9640-4af6-ad5b-b74489942e53&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2OTJjMGNlYi05NjQwLTRhZjYtYWQ1Yi1iNzQ0ODk5NDJlNTMiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpmaWxlOmQyN2MxMDE2LTU2OWItNGZkYS04YjQ0LTRiNjRlYWM1YjE2OCI6WyJyZWFkIl19LCJleHAiOjE1MDI0NjI0OTksIm5iZiI6MTUwMjQ1OTEzOX0.LTTZhgJjIifL-2cTSwOpODcJcsypnDhQ6lUcdHRPhxE"/>
+          <img class="plain"  src=""/>
           <h3 class="SprintName">ePages<font color="red">6</font> &amp; ePages<font color="red">J</font></h3>
         </section>
         <!-- jira task -->
@@ -33,25 +33,16 @@
 
         </section>
         <!-- task distribution -->
-        <section>
+        <section>        
           <h3>Current sprint</h3>
-          <p>Task distribution</p>
-          <table>
-            <tr>
-              <td>
-                <canvas id="taskDistribution" width="600" height="600"></canvas>
-              </td>
-              <td>
-                <canvas id="taskDistributionLegend" width="300" height="370"></canvas>
-              </td>
-            </tr>
-          </table>
+          <p>Task priority distribution</p>
+          <canvas id="priorityDistribution" width="900" height="600"></canvas>
         </section>
         <!-- task type distribution-->
         <section>
           <h3>Current sprint</h3>
           <p>Task type distribution</p>
-          <canvas id="typeDistribution" width="600" height="600"></canvas>
+          <canvas id="typeDistribution" width="900" height="600"></canvas>
         </section>
         <!-- history -->
         <section>
@@ -81,15 +72,6 @@
     </div>
     <script data-main="presentation" src="lib/require.js"></script>
     <script src="bower_components/reveal-js/lib/js/head.min.js"></script>
-    <script src="bower_components/reveal-js/js/reveal.min.js"></script>
-    <script>
-     Reveal.initialize({
-      controls: false,
-      progress: true,
-      history: true,
-      center: true,
-				transition: 'none', // none/fade/slide/convex/concave/zoom
-			});
-		</script>
+    <script src="bower_components/reveal-js/js/reveal.min.js"></script>    
 	</body>
   </html>
