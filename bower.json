@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "Chart.js": "~1.0.2",
+    "Chart.js": "latest",
     "randomcolor": "~0.3.1",
     "reveal-js": "~2.6.2",
     "jquery": "~2.1.3"

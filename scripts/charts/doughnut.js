@@ -30,9 +30,9 @@ define(function () {
 			var canvas = document.getElementById(chartData.canvasName+"Legend");
 			var canvasContex = canvas.getContext("2d");
 			var height = canvas.height;
-			var sizeFactor = height/400;
+			var sizeFactor = height / 400;
 			var FontHeight = 16 * sizeFactor;
-			canvasContex.font = FontHeight+"px Tahoma,Verdana,Segoe,sans-serif";
+			canvasContex.font = FontHeight + "px Tahoma,Verdana,Segoe,sans-serif";
 			var rawData = chartData.data
 			var xPos = 0;
 			var yPos = 0;
