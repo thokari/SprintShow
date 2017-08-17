@@ -25,7 +25,11 @@ define(function () {
 		summary:"As a merchant I do not want to show outdated payment logos to my customers.",
 		priority:"Major",
 		integrated:"7.11.0",
-		platform:"ePages6"
+		platform:"ePages6",
+		links: [
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf' target='_blank'>ePages6</a>",
+			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
+		]
 	},
 	{
 		id:"AD-7402",
@@ -34,7 +38,11 @@ define(function () {
 		summary:"On the 'pay with Paypal' step of the checkout we are now redirecting the endcustomer to Paypal automatically.",
 		priority:"Major",
 		integrated:"7.10.0",
-		platform:"ePages6"
+		platform:"ePages6",
+		links: [
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf' target='_blank'>ePages6</a>",
+			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
+		]
 	},
 	{
 		id:"AD-7360",
@@ -43,7 +51,11 @@ define(function () {
 		summary:"As a merchant I dont want to be confused by to many options and links while trying to setting up Paypal",
 		priority:"Major",
 		integrated:"7.10.0",
-		platform:"ePages6"
+		platform:"ePages6",
+		links: [
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf' target='_blank'>ePages6</a>",
+			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
+		]
 	},
 	{
 		id:"AD-7710",

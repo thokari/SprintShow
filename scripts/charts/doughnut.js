@@ -32,7 +32,9 @@ define(function () {
 			var height = canvas.height;
 			var sizeFactor = height / 400;
 			var FontHeight = 16 * sizeFactor;
+
 			canvasContex.font = FontHeight + "px Tahoma,Verdana,Segoe,sans-serif";
+			
 			var rawData = chartData.data
 			var xPos = 0;
 			var yPos = 0;
