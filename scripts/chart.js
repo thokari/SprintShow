@@ -167,7 +167,7 @@ define([
 			}
 
 			var futureConsiderations = "<section><h2>Future Sprints Goals</h2><ul><li>1&1 improvements</li><li>Performance improvements for ePages Now! launch</li><li>ePagesJ Search Research</li></ul></section>";
-			document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions? <br>&<br> Thank yous!</h3></section><section><h3>Thank you!</h3></section>";
+			document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions? <br>&<br> Thank yous!</h3></section>";
 
 		};
 
