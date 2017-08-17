@@ -1,0 +1,47 @@
+------------------------------------------------- PRE
+
+- Postman profile is InfinityReview
+- VM http://trident.vm-intern.epages.com/3rdPartyTools/LinkBuilder/linkBuilder.html?hostname=ocean-unity.epages.systems
+
+
+------------------------------------------------- UNITY-3422 API Product Display Title
+
+-- Postman 
+--- get product by id
+---- 59941134-882B-6712-E693-D58092309126
+
+-- Localized String in ePages6
+--- Supports locale ?locale=de_DE
+
+
+------------------------------------------------- AD-8038 API Change Locale
+
+-- Postman 
+--- create cart
+---- locale: "en_GB"
+
+----- set CartId
+----- set CartToken
+
+-- Postman
+--- change cart locale
+---- locale: "de_DE"
+
+-- changes price format and localized strings
+
+
+----------------------------------------------- AD-7707
+
+-- Places are: MBO settings, Checkout payment step, Checkout´s last step "pay", Page element (epages 6)
+
+
+
+
+----------------------------------------------- AD-7402 Redirect to Paypal automatically
+
+----------------------------------------------- AD-7360 Paypal Express: Clean up settings page
+
+step 5 is completely removed from the setup guide
+
+
+----------------------------------------------- AD-7710 Research SSO for CM4all
