@@ -21,30 +21,37 @@
         <section>
           <h2>Sprint review 1</h2>
           <h3><span id="TeamName"></span>&#x221e; Team Infinity &#x221e;</h3>
-          <img class="plain"  src=""/>
+          <img style="background:none; border:none; box-shadow:none;" src="img/teaminfinitylogo.png"/>
           <h3 class="SprintName">ePages<font color="red">6</font> &amp; ePages<font color="red">J</font></h3>
         </section>
         <!-- jira task -->
         <section>
           <h2>Sprint goal</h2>
-
-          <ul class="sprint_goals"></ul>
-          
-
+          <ul class="sprint_goals">
+            <li>Moving from Kanban to Scrum</li>
+            <li>5 interesting issues over the past 3 months</li>
+          </ul>
         </section>
         <!-- task distribution -->
         <section>        
           <h3>Current sprint</h3>
           <p>Task priority distribution</p>
           <canvas id="priorityDistribution" width="900" height="600"></canvas>
+          <button id="priorityEp6">ePages6</button>
+          <button id="priorityTotal">Total</button>
+          <button id="priorityEpj">ePagesJ</button>
+
         </section>
         <!-- task type distribution-->
         <section>
           <h3>Current sprint</h3>
           <p>Task type distribution</p>
           <canvas id="typeDistribution" width="900" height="600"></canvas>
+          <button id="typeEp6">ePages6</button>
+          <button id="typeTotal">Total</button>
+          <button id="typeEpj">ePagesJ</button>
         </section>
-        <!-- history -->
+        <!-- history
         <section>
           <h3>Last sprints</h3>
           <p>History</p>
@@ -58,16 +65,9 @@
               </td>
             </tr>
           </table>
-        </section>
+        </section> -->
         <!-- jira task -->
-        <section>
-          <h2>Sprint goal</h2>
-          <ul class="sprint_goals"></ul>
-        </section>
         <!-- end -->
-        <section>
-
-        </section>
       </div>
     </div>
     <script data-main="presentation" src="lib/require.js"></script>
