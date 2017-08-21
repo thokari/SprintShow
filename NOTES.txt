@@ -1,10 +1,14 @@
 ------------------------------------------------- PRE
-
 - Postman profile is InfinityReview
 - VM http://trident.vm-intern.epages.com/3rdPartyTools/LinkBuilder/linkBuilder.html?hostname=ocean-unity.epages.systems
+- PBO https://ocean-unity.epages.systems/epages/Site.admin/sec6cbcb62c29/?ViewAction=PBO-ViewShops&ObjectID=1857
+- Unity https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea
 
+- Paypal Visa	4485768695700110	any date in the future	any three digit number
 
 ------------------------------------------------- UNITY-3422 API Product Display Title
+
+As we can see on the description 
 
 -- Postman 
 --- get product by id
@@ -13,8 +17,9 @@
 -- Localized String in ePages6
 --- Supports locale ?locale=de_DE
 
-
 ------------------------------------------------- AD-8038 API Change Locale
+
+Task related to multi language support of ePagesNow
 
 -- Postman 
 --- create cart
@@ -27,21 +32,25 @@
 --- change cart locale
 ---- locale: "de_DE"
 
--- changes price format and localized strings
+cart_id
+cart_token
 
+-- changes price format and localized strings
 
 ----------------------------------------------- AD-7707
 
 -- Places are: MBO settings, Checkout payment step, Checkout´s last step "pay", Page element (epages 6)
 
-
-
-
 ----------------------------------------------- AD-7402 Redirect to Paypal automatically
+
+Last step of checkout has now an auto - redirect
+
 
 ----------------------------------------------- AD-7360 Paypal Express: Clean up settings page
 
-step 5 is completely removed from the setup guide
+step 5 is completely removed from the setup guide in epNOW
+
+Previously there was an old instruction related to paypal BO settings specifically UTF-8
 
 
 ----------------------------------------------- AD-7710 Research SSO for CM4all
