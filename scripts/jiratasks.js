@@ -27,8 +27,7 @@ define(function () {
 		integrated:"7.11.0",
 		platform:"ePages6",
 		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf' target='_blank'>ePages6</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/seca716b8beb2/?ViewAction=MBO-ViewSettings&ObjectID=20905' target='_blank'>ePages6 MBO</a>"
 		]
 	},
 	{
@@ -40,7 +39,7 @@ define(function () {
 		integrated:"7.10.0",
 		platform:"ePages6",
 		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf' target='_blank'>ePages6</a>",
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf/en_GB/?ObjectPath=/Shops/DemoShop/Products/lt_0401107001' target='_blank'>ePages6</a>",
 			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
 		]
 	},
@@ -53,8 +52,8 @@ define(function () {
 		integrated:"7.10.0",
 		platform:"ePages6",
 		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf' target='_blank'>ePages6</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/seca716b8beb2/?ViewAction=MBO-ViewSettings&ObjectID=20898' target='_blank'>ePages6 MBO</a>",
+			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec2e3f8b790a/?ViewAction=MBO-ViewSettings&ObjectID=21614' target='_blank'>ePagesNow MBO</a>"
 		]
 	},
 	{
@@ -64,7 +63,10 @@ define(function () {
 		summary:"Clarify the requirements and possible ways to solve",
 		priority:"Major",
 		integrated:"",
-		platform:"ePagesJ"
+		platform:"ePagesJ",
+		links: [
+			"<a href='https://epages.atlassian.net/wiki/spaces/TI/pages/183535812/New+SSO+Proposal?preview=/183535812/184200997/SSO_plan.png' target='_blank'>SSO Plan</a>"
+		]
 	}
 	];
 });

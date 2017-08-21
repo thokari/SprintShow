@@ -151,14 +151,17 @@ define([
 			
 			for (var i = 0; i < totalTasksCount ; i++) {
 
-				var issueImg = "<img height='30px' style='background:none; border:none; box-shadow:none;' src='img/" + jiraTasks[i].priority + ".svg'/>";
+				var issueImg = "<img height='30px' style='background:none; border:none; box-shadow:none; padding-left: 10px;' src='img/" + jiraTasks[i].priority + ".svg'/>";
 
 				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + jiraTasks[i].id + "'>" + jiraTasks[i].id + "</a>";				
 
 				var ContentText = "<section><h2>" + issueImg + "<font color='" + prettyColors[i + magicColorIndex] + "'>" + jiraLinkId + "</font><br>"  + jiraTasks[i].name + "</h2>" + "<p> <font color='" + prettyColors[i + magicColorIndex + 1 ] + "'>" + jiraTasks[i].summary + "</font>";
 
 				if (jiraTasks[i].links) {
-					ContentText += "</p>" + "<p>" + jiraTasks[i].links[0] + "&nbsp;&nbsp;&nbsp;" + jiraTasks[i].links[1];
+					ContentText += "</p>" + "<p>" + jiraTasks[i].links[0];
+					if (jiraTasks[i].links[1]) {
+						ContentText += "&nbsp;&nbsp;&nbsp;" + jiraTasks[i].links[1];
+					}
 				}
 
 				ContentText += "</p>" + "</section>";
