@@ -123,7 +123,7 @@ define([
 			return Math.floor(distributionCount * 100 / total);
 		};
 
-		var setFilteredTaskDistributionData = function (callback) {
+		var defineFilteredTaskDistributionData = function (callback) {
 			colorGroupIndex = 3;
 
 			var filteredJiraTasks = jiraTasks.filter(callback);
@@ -141,32 +141,36 @@ define([
 				tasksPlatformDistribution[ filteredJiraTasks[i].platform ] = tasksPlatformDistribution[ filteredJiraTasks[i].platform ] == undefined ? 1 : tasksPlatformDistribution[ filteredJiraTasks[i].platform ] + 1;
 			}
 
-
+			return filteredJiraTasks;
 		};
 
 		var addJiraSlidesToPresentations = function () {
 
-			var totalTasksCount = jiraTasks.length;
+			var filteredJiraTasks = defineFilteredTaskDistributionData( function (elem) {
+				return elem.type != "Bug";
+			});
+
+			var totalTasksCount = filteredJiraTasks.length;
 			var magicColorIndex = 5;
-			
+
 			for (var i = 0; i < totalTasksCount ; i++) {
 
-				var issueImg = "<img height='30px' style='background:none; border:none; box-shadow:none; padding-left: 10px;' src='img/" + jiraTasks[i].priority + ".svg'/>";
+				var issueImg = "<img height='30px' style='background:none; border:none; box-shadow:none; padding-left: 10px;' src='img/" + filteredJiraTasks[i].priority + ".svg'/>";
 
-				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + jiraTasks[i].id + "'>" + jiraTasks[i].id + "</a>";				
+				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + filteredJiraTasks[i].id + "'>" + filteredJiraTasks[i].id + "</a>";       
 
-				var ContentText = "<section><h2>" + issueImg + "<font color='" + prettyColors[i + magicColorIndex] + "'>" + jiraLinkId + "</font><br>"  + jiraTasks[i].name + "</h2>" + "<p> <font color='" + prettyColors[i + magicColorIndex + 1 ] + "'>" + jiraTasks[i].summary + "</font>";
+				var contentText = "<section><h2>" + issueImg + "<font color='" + prettyColors[i + magicColorIndex] + "'>" + jiraLinkId + "</font><br>"  + filteredJiraTasks[i].name + "</h2>" + "<p> <font color='" + prettyColors[i + magicColorIndex + 1 ] + "'>" + filteredJiraTasks[i].summary + "</font>";
 
-				if (jiraTasks[i].links) {
-					ContentText += "</p>" + "<p>" + jiraTasks[i].links[0];
-					if (jiraTasks[i].links[1]) {
-						ContentText += "&nbsp;&nbsp;&nbsp;" + jiraTasks[i].links[1];
+				if (filteredJiraTasks[i].links) {
+					contentText += "</p>" + "<p>" + filteredJiraTasks[i].links[0];
+					if (filteredJiraTasks[i].links[1]) {
+						contentText += "&nbsp;&nbsp;&nbsp;" + filteredJiraTasks[i].links[1];
 					}
 				}
 
-				ContentText += "</p>" + "</section>";
+				contentText += "</p>" + "</section>";
 
-				document.getElementsByClassName('slides')[0].innerHTML += ContentText;
+				document.getElementsByClassName('slides')[0].innerHTML += contentText;
 			}
 
 			var futureConsiderations = "<section><h2>Future Sprints Goals</h2><ul><li>1&1 improvements</li><li>Performance improvements for ePages Now! launch</li><li>ePagesJ Search Research</li></ul></section>";
@@ -187,14 +191,14 @@ define([
 			});
 
 			Reveal.addEventListener( 'slidechanged', function( event ) {
-				if (event.indexh === 2 && !charts["priorityChart"]) {
-					setFilteredTaskDistributionData(function () {
+				if (event.indexh === 2 && charts["priorityChart"] === undefined) {
+					defineFilteredTaskDistributionData(function () {
 						return true;
 					});
 					renderPriorityDistributionChart();
 				}
-				if (event.indexh === 3 && !charts["typeChart"]) {
-					setFilteredTaskDistributionData(function () {
+				if (event.indexh === 3 && charts["typeChart"] === undefined) {
+					defineFilteredTaskDistributionData(function () {
 						return true;
 					});
 					renderTypeDistributionChart();
@@ -203,7 +207,7 @@ define([
 
 			document.getElementById('priorityEp6').addEventListener('click', function() {
 				charts["priorityChart"].destroy();
-				setFilteredTaskDistributionData(function (elem) {
+				defineFilteredTaskDistributionData(function (elem) {
 					return elem.platform == "ePages6";
 				});
 				renderPriorityDistributionChart();
@@ -211,7 +215,7 @@ define([
 
 			document.getElementById('priorityEpj').addEventListener('click', function() {
 				charts["priorityChart"].destroy();
-				setFilteredTaskDistributionData(function (elem) {
+				defineFilteredTaskDistributionData(function (elem) {
 					return elem.platform == "ePagesJ";
 				});
 				renderPriorityDistributionChart();	
@@ -219,7 +223,7 @@ define([
 
 			document.getElementById('priorityTotal').addEventListener('click', function() {
 				charts["priorityChart"].destroy();
-				setFilteredTaskDistributionData(function (elem) {
+				defineFilteredTaskDistributionData(function (elem) {
 					return true;
 				});
 				renderPriorityDistributionChart();	
@@ -227,7 +231,7 @@ define([
 
 			document.getElementById('typeEp6').addEventListener('click', function() {
 				charts["typeChart"].destroy();
-				setFilteredTaskDistributionData(function (elem) {
+				defineFilteredTaskDistributionData(function (elem) {
 					return elem.platform == "ePages6";
 				});
 				renderTypeDistributionChart();
@@ -235,7 +239,7 @@ define([
 
 			document.getElementById('typeEpj').addEventListener('click', function() {
 				charts["typeChart"].destroy();
-				setFilteredTaskDistributionData(function (elem) {
+				defineFilteredTaskDistributionData(function (elem) {
 					return elem.platform == "ePagesJ";
 				});
 				renderTypeDistributionChart();	
@@ -243,7 +247,7 @@ define([
 
 			document.getElementById('typeTotal').addEventListener('click', function() {
 				charts["typeChart"].destroy();
-				setFilteredTaskDistributionData(function (elem) {
+				defineFilteredTaskDistributionData(function (elem) {
 					return true;
 				});
 				renderTypeDistributionChart();	
