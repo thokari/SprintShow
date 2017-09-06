@@ -10,8 +10,10 @@ define([
 		var tasksPlatformDistribution = {};
 		var charts = {};
 		var prettyColors = ["#0072BB","#FF4C3B","#FFD034","#000000","#C6C8CA","#7B8D8E","#32B92D","#FF6EB0","#FFCB00","#93228D","#B84B9E","#F20075","#006495","#004C70","#0093D1","#F2635F","#F4D00C","#E0A025","#462066","#FFB85F","#FF7A5A","#00AAA0","#8ED2C9","#FCF4D9","#44B3C2","#F1A94E","#E45641","#5D4C46","#7B8D8E","#F2EDD8"];
-		var colorGroupIndex = 3;
 		var filteredJiraTasks = [];
+		var colorGroupIndex = 0;
+		var graphColorGroupIndex = 1;
+		var textColorGroupIndex = 13;
 
 		var getDoughnutStructureData = function() {
 			return {
@@ -124,7 +126,7 @@ define([
 		};
 
 		var defineFilteredTaskDistributionData = function (callback) {
-			colorGroupIndex = 3;
+			colorGroupIndex = graphColorGroupIndex;
 
 			var filteredJiraTasks = jiraTasks.filter(callback);
 			tasksCount = filteredJiraTasks.length;
@@ -151,13 +153,13 @@ define([
 			});
 
 			var totalTasksCount = filteredJiraTasks.length;
-			var magicColorIndex = 5;
+			var magicColorIndex = textColorGroupIndex;
 
 			for (var i = 0; i < totalTasksCount ; i++) {
 
 				var issueImg = "<img height='30px' style='background:none; border:none; box-shadow:none; padding-left: 10px;' src='img/" + filteredJiraTasks[i].priority + ".svg'/>";
 
-				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + filteredJiraTasks[i].id + "'>" + filteredJiraTasks[i].id + "</a>";       
+				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + filteredJiraTasks[i].id + "'>" + filteredJiraTasks[i].id + "</a>";
 
 				var contentText = "<section><h2>" + issueImg + "<font color='" + prettyColors[i + magicColorIndex] + "'>" + jiraLinkId + "</font><br>"  + filteredJiraTasks[i].name + "</h2>" + "<p> <font color='" + prettyColors[i + magicColorIndex + 1 ] + "'>" + filteredJiraTasks[i].summary + "</font>";
 
