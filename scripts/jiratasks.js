@@ -7,7 +7,11 @@ define(function () {
 		summary:"We need to change the Logo of the trusted shops integration in epages now and 6. The logo is shown on the settings page.",
 		priority:"Blocker",
 		integrated:"7.14.0",
-		platform:"ePages6"
+		platform:"ePages6",
+		links: [
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/sec59cb0ac59d/?ViewAction=MBO-ViewTrustedShopsCertificates&ObjectID=20878' target='_blank'>ePages6 MBO</a>",
+			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec30f1650aa0/?ViewAction=UnityMBO-ViewTrustedShopsCertificates&ObjectID=28392' target='_blank'>ePagesNow MBO</a>"
+		]
 	},
 	{
 		id:"AD-8248",
@@ -16,7 +20,11 @@ define(function () {
 		summary:"With the new payment selection page we are replacing the marketing text, so we can clean up the settings page of Paypal Plus",
 		priority:"Blocker",
 		integrated:"7.14.0",
-		platform:"ePages6"
+		platform:"ePages6",
+		links: [
+			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/sec59cb0ac59d/?ViewAction=MBO-ViewSettings&ObjectID=20942' target='_blank'>ePages6 MBO</a>",
+			"<a href='https://demounity.ocean-unity.epages.systems/epages/ukunity.admin/seccd1699821c/?ViewAction=MBO-ViewSettings&ObjectID=28491' target='_blank'>ePagesNow MBO</a>"
+		]
 	},
 	{
 		id:"AD-7756",
@@ -27,7 +35,8 @@ define(function () {
 		integrated:"7.14.0",
 		platform:"ePages6",
 		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/seca716b8beb2/?ViewAction=MBO-ViewSettings&ObjectID=20905' target='_blank'>ePages6 MBO</a>"
+			"<a href='https://demounity.ocean-unity.epages.systems/epages/demounity.admin/secb771980d4a/?ViewAction=MBO-ViewSettings&ObjectID=28493' target='_blank'>ePagesNow DE</a>",
+			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec30f1650aa0/?ViewAction=MBO-ViewSettings&ObjectID=28494' target='_blank'>ePagesNow UK</a>"
 		]
 	},
 	{
@@ -37,11 +46,7 @@ define(function () {
 		summary:"Based on the results of the research task we should switch to the new GK2.2 API.",
 		priority:"Major",
 		integrated:"7.14.0",
-		platform:"ePages6",
-		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.sf/en_GB/?ObjectPath=/Shops/DemoShop/Products/lt_0401107001' target='_blank'>ePages6</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/p/indoor-plant-calathea' target='_blank'>ePagesNow</a>"
-		]
+		platform:"ePages6"
 	},
 	{
 		id:"AD-6310",
@@ -50,11 +55,7 @@ define(function () {
 		summary:"The attribute energyLabelsString doesn't get cleared after removing the energy label for the product.",
 		priority:"Major",
 		integrated:"7.14.0",
-		platform:"ePagesJ",
-		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/seca716b8beb2/?ViewAction=MBO-ViewSettings&ObjectID=20898' target='_blank'>ePages6 MBO</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec2e3f8b790a/?ViewAction=MBO-ViewSettings&ObjectID=21614' target='_blank'>ePagesNow MBO</a>"
-		]
+		platform:"ePagesJ"
 	}
 	];
 });
