@@ -175,7 +175,7 @@ define([
 				document.getElementsByClassName('slides')[0].innerHTML += contentText;
 			}
 
-			var futureConsiderations = "<section><h2>Future Sprints Goals</h2><ul><li>1&1 improvements</li><li>Performance improvements for ePages Now! launch</li><li>ePagesJ Search Research</li></ul></section>";
+			var futureConsiderations = "<section><h2>Roadmap</h2><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
 			document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions? <br>&<br> Thank yous!</h3></section>";
 
 		};
