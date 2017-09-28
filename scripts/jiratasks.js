@@ -9,8 +9,8 @@ define(function () {
 		integrated:"7.15.0",
 		platform:"ePages6",
 		links: [
-			"<a href='https://ocean-unity.epages.systems/epages/DemoShop.admin/sec59cb0ac59d/?ViewAction=MBO-ViewTrustedShopsCertificates&ObjectID=20878' target='_blank'>ePages6 MBO</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec30f1650aa0/?ViewAction=UnityMBO-ViewTrustedShopsCertificates&ObjectID=28392' target='_blank'>ePagesNow MBO</a>"
+			"<a href='https://ocean-test.epages.systems/epages/DemoShop.admin/secae620c4939/?ViewAction=MBO-ViewAppStore&ObjectID=20386&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>ePages6 MBO</a>",
+			"<a href='https://demounity.ocean-test.epages.systems/epages/demounity.admin/secaf8e9cb574/?ViewAction=UnityMBO-ViewAppStore&ObjectID=20811&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>ePagesNow MBO</a>"
 		]
 	},
 	{
@@ -32,19 +32,6 @@ define(function () {
 		platform:"ePages6"
 	},
 	{
-		id:"AD-8254",
-		name:"Google Shopping: Activate mexican product feed",
-		type:"Task",
-		summary:"As a merchant I want to list my products at google shopping, in mexican language.",
-		priority:"Critical",
-		integrated:"7.15.0",
-		platform:"ePages6",
-		links: [
-			"<a href='https://demounity.ocean-unity.epages.systems/epages/demounity.admin/secb771980d4a/?ViewAction=MBO-ViewSettings&ObjectID=28493' target='_blank'>ePagesNow DE</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec30f1650aa0/?ViewAction=MBO-ViewSettings&ObjectID=28494' target='_blank'>ePagesNow UK</a>"
-		]
-	},
-	{
 		id:"AD-8016",
 		name:"Show Postfinance as a dedicated payment group",
 		type:"Story",
@@ -53,8 +40,7 @@ define(function () {
 		integrated:"7.15.0",
 		platform:"ePages6",
 		links: [
-			"<a href='https://demounity.ocean-unity.epages.systems/epages/demounity.admin/secb771980d4a/?ViewAction=MBO-ViewSettings&ObjectID=28493' target='_blank'>ePagesNow DE</a>",
-			"<a href='https://ukunity.ocean-unity.epages.systems/epages/ukunity.admin/sec30f1650aa0/?ViewAction=MBO-ViewSettings&ObjectID=28494' target='_blank'>ePagesNow UK</a>"
+			"<a href='https://ocean-test.epages.systems/epages/Site.admin/sec2203dfa75d/?ViewAction=PBO-ViewFeatures&ObjectID=1865&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>PBO Unity Switzerland Features</a>"
 		]
 	},
 	{
@@ -65,6 +51,19 @@ define(function () {
 		priority:"Minor",
 		integrated:"7.15.0",
 		platform:"ePages6"
-	}
+	},
+    {
+    	id:"AD-8254",
+    	name:"Google Shopping: Activate mexican product feed",
+    	type:"Task",
+    	summary:"As a merchant I want to list my products at google shopping, in mexican language.",
+    	priority:"Critical",
+    	integrated:"7.15.0",
+    	platform:"ePages6",
+    	links: [
+    		"<a href='https://ocean-test.epages.systems/epages/DemoShopMexico.admin/sec9715f5bcb5/?ViewAction=MBO-ViewMBO&ObjectID=21363&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>ePages6 MX</a>",
+    		"<a href='https://demounitymx.ocean-test.epages.systems/epages/demounitymx.admin/secf45e9456f8/?ViewAction=UnityMBO-ViewMBO&ObjectID=21288&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>ePagesNow MX</a>"
+    	]
+    }
 	];
 });
