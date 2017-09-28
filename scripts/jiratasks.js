@@ -61,8 +61,8 @@ define(function () {
     	integrated:"7.15.0",
     	platform:"ePages6",
     	links: [
-    		"<a href='https://ocean-test.epages.systems/epages/DemoShopMexico.admin/sec9715f5bcb5/?ViewAction=MBO-ViewMBO&ObjectID=21363&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>ePages6 MX</a>",
-    		"<a href='https://demounitymx.ocean-test.epages.systems/epages/demounitymx.admin/secf45e9456f8/?ViewAction=UnityMBO-ViewMBO&ObjectID=21288&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>ePagesNow MX</a>"
+    		"<a href='https://ocean-test.epages.systems/epages/DemoShop.admin/sec97827ffbe6/?ViewAction=MBO-ViewProductPortals&ObjectID=20386' target='_blank'>ePages6 MX</a>",
+    		"<a href='https://demounitymx.ocean-test.epages.systems/epages/demounitymx.admin/secf9cf8e5287/?ViewAction=UnityMBO-ViewProductPortals&ObjectID=21288' target='_blank'>ePagesNow MX</a>"
     	]
     }
 	];
