@@ -1,0 +1,56 @@
+import java.net.URLEncoder
+import groovy.json.JsonOutput
+
+apply from: 'gradle/http.gradle'
+
+ext {
+    jiraBaseUrl = 'https://epages.atlassian.net/rest/api/2'
+    jiraUser = [ "${jiraUsername}": "${jiraPassword}" ]
+    buildJiraUrl = { urlPath -> jiraBaseUrl + urlPath }
+    jiraIds = [
+        'Integrated in Cluster Version': 'customfield_12972',
+        'Agile Development': '11830',
+        'New Feature': '2'
+    ]
+}
+
+task getIssueData {
+    group 'JIRA'
+    description 'Get data for JIRA issues'
+    ext {
+        issues = project.getProperty('issueIds')
+        templateFile = file 'templates/jiratasks.tmpl.js'
+        outputFile = file 'scripts/jiratasks.js'
+    }
+    doLast {
+        def response = httpRequest(
+            user: jiraUser,
+            url: buildJiraUrl('/search'),
+            method: 'GET',
+            query: [
+                jql: URLEncoder.encode("id in (${issues})")
+            ]
+        )
+        def transformedIssues = response.issues.collect {
+            [
+                id: it.key,
+                name: it.fields.summary,
+                type: it.fields.issuetype.name,
+                summary: '',
+                priority: it.fields.priority.name,
+                integrated: it.fields.customfield_12972.value,
+                platform: 'ePages6'
+            ]
+        }
+        copy {
+            from 'templates/jiratasks.tmpl.js'
+            into 'scripts'
+            rename { 'jiratasks.js' }
+            expand([ issuesAsJson: JsonOutput.prettyPrint(JsonOutput.toJson(transformedIssues)) ])
+        }
+    }
+}
+
+wrapper {
+    gradleVersion = '4.2'
+}

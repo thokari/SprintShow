@@ -1,57 +1,68 @@
 <!doctype html>
 <html lang="en">
+
 <head>
- <meta charset="utf-8">
- <title class="SprintName">...</title>
- <meta name="apple-mobile-web-app-capable" content="yes" />
- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8">
+    <title class="SprintName">...</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
- <link rel="stylesheet" href="bower_components/reveal-js/css/reveal.min.css">
- <link rel="stylesheet" href="bower_components/reveal-js/css/theme/night.css" id="theme">
-			<!--[if lt IE 9]>
-				<script src="lib/js/html5shiv.js"></script>
-       <![endif]-->
-     </head>
-     <body>
-      <div class="reveal">
-       <div class="slides">
-        <!-- start -->
-        <section>
-          <h2>Sprint Review 3</h2>
-          <h3><span id="TeamName"></span>&#x221e; Team Infinity &#x221e;</h3>
-          <img style="background:none; border:none; box-shadow:none;" src="img/teaminfinitylogo.png"/>
-          <h3 class="SprintName">ePages<font color="red">6</font> &amp; ePages<font color="red">J</font></h3>
-        </section>
-        <!-- jira task -->
-        <section>
-          <h2>Sprint Goals</h2>
-          <ul class="sprint_goals">
-            <li>Performance & Behavioral improvements for ePages Now!</li>
-            <li>Cartridge obsolescence</li>
-          </ul>
-        </section>
-        <!-- task distribution -->
-        <section>
-          <h3>Current sprint</h3>
-          <p>Task priority distribution</p>
-          <canvas id="priorityDistribution" width="900" height="600"></canvas>
-          <button id="priorityEp6">ePages6</button>
-          <button id="priorityTotal">Total</button>
-          <button id="priorityEpj">ePagesJ</button>
+    <link rel="stylesheet" href="bower_components/reveal-js/css/reveal.min.css">
+    <link rel="stylesheet" href="bower_components/reveal-js/css/theme/night.css" id="theme">
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
 
-        </section>
-        <!-- task type distribution-->
-        <section>
-          <h3>Current sprint</h3>
-          <p>Task type distribution</p>
-          <canvas id="typeDistribution" width="900" height="600"></canvas>
-          <button id="typeEp6">ePages6</button>
-          <button id="typeTotal">Total</button>
-          <button id="typeEpj">ePagesJ</button>
-        </section>
-        <!-- history
+    <style>
+        img.teaminfinity-logo.logo {
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- start -->
+            <section>
+                <h2>Sprint Review 3</h2>
+                <h3><span id="TeamName"></span>&#x221e; Team Infinity &#x221e;</h3>
+                <img class="logo teaminfinity-logo" src="img/teaminfinitylogo.png" />
+                <h3 class="SprintName">ePages<font color="red">6</font> &amp; ePages<font color="red">J</font></h3>
+            </section>
+            <!-- jira task -->
+            <section>
+                <h2>Sprint Goals</h2>
+                <ul class="sprint_goals">
+                    <li>Performance &amp; Behavioral improvements for ePages Now!</li>
+                    <li>Cartridge obsolescence</li>
+                </ul>
+            </section>
+            <!-- task distribution -->
+            <section>
+                <h3>Current sprint</h3>
+                <p>Task priority distribution</p>
+                <canvas id="priorityDistribution" width="900" height="600"></canvas>
+                <button id="priorityEp6">ePages6</button>
+                <button id="priorityTotal">Total</button>
+                <button id="priorityEpj">ePagesJ</button>
+
+            </section>
+            <!-- task type distribution-->
+            <section>
+                <h3>Current sprint</h3>
+                <p>Task type distribution</p>
+                <canvas id="typeDistribution" width="900" height="600"></canvas>
+                <button id="typeEp6">ePages6</button>
+                <button id="typeTotal">Total</button>
+                <button id="typeEpj">ePagesJ</button>
+            </section>
+            <!-- history
         <section>
           <h3>Last sprints</h3>
           <p>History</p>
@@ -66,12 +77,13 @@
             </tr>
           </table>
         </section> -->
-        <!-- jira task -->
-        <!-- end -->
-      </div>
+            <!-- jira task -->
+            <!-- end -->
+        </div>
     </div>
     <script data-main="presentation" src="lib/require.js"></script>
     <script src="bower_components/reveal-js/lib/js/head.min.js"></script>
     <script src="bower_components/reveal-js/js/reveal.min.js"></script>
-	</body>
-  </html>
+</body>
+
+</html>
