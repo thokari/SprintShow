@@ -38,7 +38,7 @@ task getIssueData {
                 type: it.fields.issuetype.name,
                 summary: '',
                 priority: it.fields.priority.name,
-                integrated: it.fields.customfield_12972.value,
+                integrated: it.fields.customfield_12972?.value,
                 platform: 'ePages6'
             ]
         }
