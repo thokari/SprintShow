@@ -1,0 +1,58 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+/**
+* @param opts A map containing request options:<br>
+*   url (String)
+*   query (Map)
+*   method (String)
+*   headers (Map)
+*   body (String)
+*   user (String)
+**/
+def httpRequest(final Map opts) {
+    if (!opts.url) {
+        throw new Exception('Error: no url specified')
+    }
+    def curlCommandLineArgs = [ 'curl', '-X ' + (opts.method ?: 'GET') ]
+    def mergedHeaders = [ 'Content-Type': 'application/json' ]
+    if (opts.headers != null) {
+        mergedHeaders.putAll opts.headers
+    }
+    def headerArgs = mergedHeaders.entrySet().inject([], { acc, current ->
+        acc += "-H '${current.key}:${current.value}'"
+    }).join(' ')
+    curlCommandLineArgs += headerArgs
+    if (opts.body != null) {
+        curlCommandLineArgs += "--data '${JsonOutput.toJson(opts.body)}'"
+    }
+    if (opts.user != null) {
+        def user = opts.user.entrySet()[0]
+        curlCommandLineArgs += "-u ${user.key}:${user.value}"
+    }
+    def urlArg = opts.url
+    if (opts.query != null) {
+         urlArg += '?' << opts.query.entrySet().inject([], { acc, current ->
+            acc += "${current.key}=${current.value}"
+        }).join('&')
+    }
+    curlCommandLineArgs += urlArg
+    def curlCommand = curlCommandLineArgs.join(' ')
+    println "Executing command: $curlCommand"
+    def process = curlCommand.execute()
+    process.waitFor()
+    if (process.exitValue()) {
+        logger.warn('\033[1;33mWARNING: Could not make HTTP call.\033[0m')
+        throw new StopActionException()
+    }
+    def result = process.text
+    try {
+        return new JsonSlurper().parseText(result)
+    } catch (e) {
+        return result
+    }
+}
+
+ext {
+    httpRequest = this.&httpRequest
+}
