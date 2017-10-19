@@ -26,6 +26,15 @@ define(function () {
         "priority": "Major",
         "integrated": "7.16.0",
         "platform": "ePages6"
+    },
+    {
+        "id": "AD-8336",
+        "name": "",
+        "type": "Task",
+        "summary": "Add ESF Tests to Team Infinity pipeline",
+        "priority": "Major",
+        "integrated": "",
+        "platform": "sdfsf, sdfsf, sdfsfd"
     }
 ]
 })
