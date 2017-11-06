@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="bower_components/jquery/src/core/|bower_components/Chart.js/|**/node_modules/*|bower_components/jquery/src/manipulation/var/|bower_components/Chart.js/src/plugins/|bower_components/jquery/src/|bower_components/jquery/src/traversing/var/|bower_components/reveal-js/plugin/search/|templates/|bower_components/reveal-js/|bower_components/reveal-js/plugin/leap/|bower_components/reveal-js/plugin/print-pdf/|bower_components/Chart.js/test/|bower_components/jquery/src/traversing/|bower_components/Chart.js/src/scales/|scripts/|bower_components/jquery/src/core/var/|bower_components/jquery/src/data/var/|bower_components/Chart.js/src/platforms/|**/*.min.js|bower_components/reveal-js/plugin/highlight/|bower_components/jquery/src/queue/|bower_components/Chart.js/src/|bower_components/reveal-js/plugin/notes-server/|bower_components/reveal-js/plugin/postmessage/|bower_components/jquery/src/exports/|bower_components/reveal-js/test/|bower_components/jquery/src/effects/|bower_components/jquery/src/var/|bower_components/reveal-js/plugin/markdown/|bower_components/jquery/src/data/|bower_components/Chart.js/samples/charts/area/|lib/|bower_components/reveal-js/js/|bower_components/jquery/src/manipulation/|bower_components/randomcolor/|bower_components/Chart.js/src/charts/|bower_components/Chart.js/test/specs/|bower_components/reveal-js/lib/js/|bower_components/jquery/src/event/|bower_components/Chart.js/samples/|**/bower_components/*|bower_components/reveal-js/plugin/remotes/|bower_components/jquery/src/sizzle/dist/|bower_components/jquery/src/ajax/var/|bower_components/jquery/src/css/var/|bower_components/Chart.js/src/elements/|bower_components/jquery/dist/|bower_components/Chart.js/dist/|bower_components/jquery/src/ajax/|bower_components/reveal-js/plugin/multiplex/|bower_components/jquery/src/css/|bower_components/jquery/src/attributes/|bower_components/Chart.js/src/controllers/|bower_components/reveal-js/plugin/math/|bower_components/reveal-js/plugin/notes/|bower_components/Chart.js/src/core/|bower_components/reveal-js/plugin/zoom-js/" kind="src" path=""/>
+	<classpathentry excluding="dist/|src/plugins/|test/specs/|**/node_modules/*|samples/charts/area/|src/|src/controllers/|src/scales/|**/bower_components/*|samples/|test/|src/core/|src/platforms/|src/elements/|**/*.min.js|src/charts/" kind="src" path="bower_components/Chart.js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/dist"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|charts/area/|**/*.min.js" kind="src" path="bower_components/Chart.js/samples"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/samples/charts/area"/>
+	<classpathentry excluding="controllers/|charts/|scales/|**/bower_components/*|**/node_modules/*|plugins/|platforms/|core/|**/*.min.js|elements/" kind="src" path="bower_components/Chart.js/src"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/charts"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/controllers"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/core"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/elements"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/platforms"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/plugins"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/src/scales"/>
+	<classpathentry excluding="specs/|**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/test"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/Chart.js/test/specs"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/dist"/>
+	<classpathentry excluding="**/node_modules/*|core/var/|manipulation/|sizzle/dist/|ajax/|core/|data/var/|ajax/var/|css/var/|queue/|**/bower_components/*|exports/|effects/|event/|css/|manipulation/var/|attributes/|**/*.min.js|var/|traversing/|traversing/var/|data/" kind="src" path="bower_components/jquery/src"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js|var/" kind="src" path="bower_components/jquery/src/ajax"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/ajax/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/attributes"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js|var/" kind="src" path="bower_components/jquery/src/core"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/core/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js|var/" kind="src" path="bower_components/jquery/src/css"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/css/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js|var/" kind="src" path="bower_components/jquery/src/data"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/data/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/effects"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/event"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/exports"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js|var/" kind="src" path="bower_components/jquery/src/manipulation"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/manipulation/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/queue"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/sizzle/dist"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js|var/" kind="src" path="bower_components/jquery/src/traversing"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/traversing/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/jquery/src/var"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/randomcolor"/>
+	<classpathentry excluding="plugin/leap/|js/|plugin/print-pdf/|**/node_modules/*|plugin/markdown/|plugin/math/|plugin/remotes/|plugin/notes/|plugin/highlight/|plugin/zoom-js/|**/bower_components/*|test/|plugin/multiplex/|**/*.min.js|plugin/notes-server/|plugin/search/|lib/js/|plugin/postmessage/" kind="src" path="bower_components/reveal-js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/lib/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/highlight"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/leap"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/markdown"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/math"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/multiplex"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/notes"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/notes-server"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/postmessage"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/print-pdf"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/remotes"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/search"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/plugin/zoom-js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="bower_components/reveal-js/test"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="lib"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="scripts"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="templates"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
