@@ -40,7 +40,8 @@ task getIssueData {
                 summary: '',
                 priority: it.fields.priority.name,
                 integrated: it.fields.customfield_12972?.value,
-                platform: 'ePages6'
+                platform: 'ePages6',
+                links: []
             ]
         }
         copy {
