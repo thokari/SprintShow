@@ -145,6 +145,20 @@ define([
 
 			return filteredJiraTasks;
 		};
+		var addBugList = function (){
+			var bugList = defineFilteredTaskDistributionData( function (elem) {
+				return elem.type == "Bug";
+			});
+			var bugsText = "<section><h3> Bugs </h3>";
+			for(var j = 0; j < bugList.length; j++){
+				var issueImg = "<img height='16px' style='background:none; border:none; box-shadow:none; padding: 0px; margin: 2px;' src='img/" + bugList[j].priority + ".svg'/>";
+				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + bugList[j].id + "'>" + bugList[j].id + "</a>";
+				bugsText += "<p style='font-size: 25px;'>"+ issueImg + jiraLinkId +" : "+bugList[j].name+"</p>";
+
+			}
+			bugsText += "</section>";
+			document.getElementsByClassName('slides')[0].innerHTML += bugsText;
+		}
 
 		var addJiraSlidesToPresentations = function () {
 
@@ -152,6 +166,8 @@ define([
 				return elem.type != "Bug";
 			});
 
+			
+			addBugList();
 			var totalTasksCount = filteredJiraTasks.length;
 			var magicColorIndex = textColorGroupIndex;
 
