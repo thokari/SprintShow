@@ -10,7 +10,9 @@ define(function () {
         "platform": "ePages6",
         "links": [
              "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AGoogleBase' target='_blank'>coverage</a>",
-             "Postman"
+             "<a href='https://teamred-09.vm-intern.epages.com/epages/DemoShop.admin/sec42121279d8/?ViewAction=MBO-ViewGeneral&ObjectID=20754' target='_blank'>Jacket</a>",
+             "<a href='https://teamred-09.vm-intern.epages.com/epages/DemoShop.admin/sec42121279d8/?ViewAction=MBO-ViewGeneral&ObjectID=20805' target='_blank'>Shoe</a>",
+             "<a href='https://teamred-09.vm-intern.epages.com/epages/DemoShop.admin/sec42121279d8/?ViewAction=MBO-ViewGeneral&ObjectID=28194' target='_blank'>Product export</a>"
         ]
     },
     {
@@ -22,8 +24,7 @@ define(function () {
         "integrated": "7.18.0",
         "platform": "ePages6",
         "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AAppStore' target='_blank'>coverage</a>",
-             "Link to MBO"
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AAppStore' target='_blank'>coverage</a>"
         ]
     },
     {
@@ -36,7 +37,8 @@ define(function () {
         "platform": "ePages6",
         "links": [
              "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AOrder' target='_blank'>coverage</a>",
-             "Link to MBO"
+             "<a href='https://demounity.teamred-09.vm-intern.epages.com/epages/demounity.admin?ViewAction=UnityMBO-ViewDocuments&ObjectID=21218&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO orders</a>",
+             "Postman"
         ]
     },
     {
@@ -48,7 +50,20 @@ define(function () {
         "integrated": "7.18.0",
         "platform": "ePages6",
         "links": [
+             "<a href='http://teamred-jenkins.vm-intern.epages.com:8080/job/TEST_RUN_ESF/' target='_blank'>Jenkins TEST_RUN_ESF</a>",
             
+        ]
+    },
+    {
+        "id": "AD-8406",
+        "name": "Reactivation of webhooks",
+        "type": "Research",
+        "summary": "",
+        "priority": "Critical",
+        "integrated": "7.18.0",
+        "platform": "ePages6",
+        "links": [
+            "<a href='https://epages.atlassian.net/wiki/spaces/TI/pages/194314331/Events+Webhooks+Diagrams' target='_blank'>confuence</a>"
         ]
     }
 ]
