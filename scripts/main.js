@@ -149,7 +149,7 @@ define([
 			var bugList = defineFilteredTaskDistributionData( function (elem) {
 				return elem.type == "Bug";
 			});
-			var bugsText = "<section><h3> Bugs </h3>";
+			var bugsText = "<section><h3>Fixes</h3>";
 			for(var j = 0; j < bugList.length; j++){
 				var issueImg = "<img height='16px' style='background:none; border:none; box-shadow:none; padding: 0px; margin: 2px;' src='img/" + bugList[j].priority + ".svg'/>";
 				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + bugList[j].id + "'>" + bugList[j].id + "</a>";
