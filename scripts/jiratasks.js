@@ -1,69 +1,64 @@
 define(function () {
     return [
     {
-        "id": "EPG-30743",
-        "name": "Google Shopping: allow lower case letters in google product attributes",
+        "id": "AD-8515",
+        "name": "Clean up REST-API-Tests",
         "type": "Improvement",
         "summary": "",
         "priority": "Blocker",
-        "integrated": "7.18.0",
-        "platform": "ePages6",
+        "integrated": "7.20.0",
+        "platform": "ePagesj",
         "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AGoogleBase' target='_blank'>coverage</a>",
-             "<a href='https://teamred-09.vm-intern.epages.com/epages/DemoShop.admin/sec42121279d8/?ViewAction=MBO-ViewGeneral&ObjectID=20754' target='_blank'>Jacket</a>",
-             "<a href='https://teamred-09.vm-intern.epages.com/epages/DemoShop.admin/sec42121279d8/?ViewAction=MBO-ViewGeneral&ObjectID=20805' target='_blank'>Shoe</a>",
-             "<a href='https://teamred-09.vm-intern.epages.com/epages/DemoShop.admin/sec42121279d8/?ViewAction=MBO-ViewGeneral&ObjectID=28194' target='_blank'>Product export</a>"
         ]
     },
     {
-        "id": "AD-8414",
-        "name": "API Callback URL for Apps only using the english default",
-        "type": "Bug",
+        "id": "AD-8398",
+        "name": "Skrill: Add Astropay",
+        "type": "Task",
         "summary": "",
         "priority": "Critical",
-        "integrated": "7.18.0",
+        "integrated": "7.20.0",
         "platform": "ePages6",
         "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AAppStore' target='_blank'>coverage</a>"
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AMoneybookers' target='_blank'>coverage</a>"
         ]
     },
     {
-        "id": "AD-8369",
-        "name": "Rest API: Add order documents to the 'order endpoint'",
-        "type": "Story",
-        "summary": "",
-        "priority": "Critical",
-        "integrated": "7.17.0",
-        "platform": "ePages6",
-        "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AOrder' target='_blank'>coverage</a>",
-             "<a href='https://demounity.teamred-09.vm-intern.epages.com/epages/demounity.admin?ViewAction=UnityMBO-ViewDocuments&ObjectID=21218&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO orders</a>",
-             "Postman"
-        ]
-    },
-    {
-        "id": "AD-8336",
-        "name": "Add ESF Tests to our pipeline",
+        "id": "AD-8511",
+        "name": "Skrill: Adjust pricing shown to the merchant",
         "type": "Task",
         "summary": "",
         "priority": "Major",
-        "integrated": "7.18.0",
+        "integrated": "7.20.0",
         "platform": "ePages6",
         "links": [
-             "<a href='http://teamred-jenkins.vm-intern.epages.com:8080/job/TEST_RUN_ESF/' target='_blank'>Jenkins TEST_RUN_ESF</a>",
-            
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AMoneybookers' target='_blank'>coverage</a>",
+             "<a href='https://epages.atlassian.net/secure/attachment/90488/Former_Skrill_pricing_in_paymentGroup.png' target='_blank'>pricing before</a>",
+             "<a href='https://demounitygb.barcelona.epages.systems/epages/demounitygb.admin/sec3889a451a1/?ViewAction=UnityMBO-ViewPaymentGroupDetails&ObjectID=40539&PaymentGroupID=17191' target='_blank'>pricing after</a>"
         ]
     },
     {
-        "id": "AD-8406",
-        "name": "Reactivation of webhooks",
-        "type": "Research",
+        "id": "AD-7959",
+        "name": "WorldPay Link not working",
+        "type": "Task",
         "summary": "",
-        "priority": "Critical",
-        "integrated": "7.18.0",
+        "priority": "Major",
+        "integrated": "7.20.0",
         "platform": "ePages6",
         "links": [
-            "<a href='https://epages.atlassian.net/wiki/spaces/TI/pages/194314331/Events+Webhooks+Diagrams' target='_blank'>confuence</a>"
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AWorldPay' target='_blank'>coverage</a>",
+        ]
+    },
+    {
+        "id": "AD-8485",
+        "name": "Confianza: Change logo",
+        "type": "Task",
+        "summary": "",
+        "priority": "Major",
+        "integrated": "7.20.0",
+        "platform": "ePages6",
+        "links": [
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
         ]
     }
 ]
