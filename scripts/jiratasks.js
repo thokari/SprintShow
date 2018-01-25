@@ -46,7 +46,8 @@ define(function () {
         "integrated": "7.20.0",
         "platform": "ePages6",
         "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AWorldPay' target='_blank'>coverage</a>",
+            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewSettings&ObjectID=40683' target='_blank'>MBO ePages6</a>",
+            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AWorldPay' target='_blank'>coverage</a>"
         ]
     },
     {
@@ -58,7 +59,9 @@ define(function () {
         "integrated": "7.20.0",
         "platform": "ePages6",
         "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
+            "<a href='img/former_mbo_confianza.png' target='_blank'>MBO Before</a>",
+            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewConfianzaOnline&ObjectID=20603' target='_blank'>MBO After</a>",
+            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
         ]
     }
 ]
