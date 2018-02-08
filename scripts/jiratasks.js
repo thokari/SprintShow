@@ -20,7 +20,8 @@ define(function () {
         "integrated": "7.21.0",
         "platform": "ePages6",
         "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AMoneybookers' target='_blank'>coverage</a>"
+             "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/?ViewAction=MBO-ViewGeneral&ObjectID=21339&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePages6</a>",
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3ADHL' target='_blank'>Coverage</a>"
         ]
     },
     {
@@ -30,12 +31,8 @@ define(function () {
         "summary": "",
         "priority": "Major",
         "integrated": "7.21.0",
-        "platform": "ePagesj",
-        "links": [
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AMoneybookers' target='_blank'>coverage</a>",
-             "<a href='https://epages.atlassian.net/secure/attachment/90488/Former_Skrill_pricing_in_paymentGroup.png' target='_blank'>pricing before</a>",
-             "<a href='https://demounitygb.barcelona.epages.systems/epages/demounitygb.admin/sec3889a451a1/?ViewAction=UnityMBO-ViewPaymentGroupDetails&ObjectID=40539&PaymentGroupID=17191' target='_blank'>pricing after</a>"
-        ]
+        "platform": "ePagesJ",
+        "links": []
     },
     {
         "id": "AD-8524",
@@ -46,8 +43,8 @@ define(function () {
         "integrated": "7.21.0",
         "platform": "ePages6",
         "links": [
-            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewSettings&ObjectID=40683' target='_blank'>MBO ePages6</a>",
-            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AWorldPay' target='_blank'>coverage</a>"
+            "<a href='https://demounity.barcelona.epages.systems/epages/demounity.admin/?ObjectID=21281&ViewAction=MBO-ViewSettings&merchantId=5A7B248F-C17E-4AFA-0D8C-D5809207320C&merchantIdInPayPal=UEZTTSXNRMJHN&productIntentID=ppplus&accountStatus=BUSINESS_ACCOUNT&isEmailConfirmed=true&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePagesNow</a>",
+            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3APayPalPlus' target='_blank'>Coverage</a>"
         ]
     },
     {
@@ -57,11 +54,10 @@ define(function () {
         "summary": "",
         "priority": "Major",
         "integrated": "7.21.0",
-        "platform": "ePagesj",
+        "platform": "ePagesJ",
         "links": [
-            "<a href='img/former_mbo_confianza.png' target='_blank'>MBO Before</a>",
-            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewConfianzaOnline&ObjectID=20603' target='_blank'>MBO After</a>",
-            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
+            "<a href='https://developer.epages.com/apps/api-reference/post-shopid-products-productid-slideshow.html' target='_blank'>API Documentation</a>",
+            "<a href='https://github.com/ePages-de/rat/blob/develop/src/test/groovy/com/epages/rat/test/product/steps/ProductImageSteps.groovy#L35-L64' target='_blank'>GitHub</a>",
         ]
     },
     {
@@ -72,11 +68,7 @@ define(function () {
         "priority": "Blocker",
         "integrated": "7.21.0",
         "platform": "ePages6",
-        "links": [
-            "<a href='img/former_mbo_confianza.png' target='_blank'>MBO Before</a>",
-            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewConfianzaOnline&ObjectID=20603' target='_blank'>MBO After</a>",
-            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
-        ]
+        "links": []
     },
     {
         "id": "AD-8604",
@@ -85,25 +77,20 @@ define(function () {
         "summary": "",
         "priority": "Major",
         "integrated": "7.21.0",
-        "platform": "ePagesj",
-        "links": [
-            "<a href='img/former_mbo_confianza.png' target='_blank'>MBO Before</a>",
-            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewConfianzaOnline&ObjectID=20603' target='_blank'>MBO After</a>",
-            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
-        ]
+        "platform": "ePagesJ",
+        "links": []
     },
     {
         "id": "AD-8606",
-        "name": "Loggin General context",
+        "name": "Logging General context",
         "type": "Improvement",
         "summary": "",
         "priority": "Major",
         "integrated": "7.21.0",
         "platform": "ePages6",
         "links": [
-            "<a href='img/former_mbo_confianza.png' target='_blank'>MBO Before</a>",
-            "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/seca14198e949/?ViewAction=MBO-ViewConfianzaOnline&ObjectID=20603' target='_blank'>MBO After</a>",
-            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AConfianzaOnline' target='_blank'>coverage</a>",
+            "<a href='img/communication.log' target='_blank'>Log</a>",
+            "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3APresentation' target='_blank'>Coverage</a>",
         ]
     }
 ]

@@ -1,0 +1,56 @@
+[2018/02/08 10:50:38,863+0100 PID:24636 Type:INFO Runtime:9211 Host:vm-hsilva.intern.epages.de AppServer:172.21.69.70:10045 Store:Store SiteGUID:5A70640F-922C-A673-14C8-AC1545464829 RequestID:WnwdaseYKYWnx2Zb0ts7@wAAAAI]
+Caller   : DE_EPAGES::Spreedly::API::Object::PaymentMethodSpreedly
+Category : COMMUNICATION.SpreedlyStripe.getGatewayCredentials
+in File  : /srv/epages/eproot/Cartridges/DE_EPAGES/Spreedly/API/Object/PaymentMethodSpreedly.pm
+at Line  : 265
+Message  : $CheckEpagesJConnection1 = 'HTTP request failed: 422 Unprocessable Entity.
+Request:
+GET http://vm-hsilva.intern.epages.de:8088/rs/payments/spreedly/gateways?shopId=5A70640F-922C-A673-14C8-AC1545464829&gatewayName=stripe
+
+
+Response:
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 422 </title>
+</head>
+<body>
+<h2>HTTP ERROR: 422</h2>
+<p>Problem accessing /rs/payments/spreedly/gateways. Reason:
+<pre>    Unprocessable Entity</pre></p>
+<hr /><i><small>Powered by Jetty://</small></i>
+</body>
+</html>
+';
+Context : [undef]
+
+---
+
+[2018/02/08 10:50:46,753+0100 PID:24636 Type:INFO Runtime:17101 Host:vm-hsilva.intern.epages.de AppServer:172.21.69.70:10045 Store:Store SiteGUID:5A70640F-922C-A673-14C8-AC1545464829 RequestID:WnwddrmIRGoENrvmD7S9jQAAAAk]
+Caller   : DE_EPAGES::Spreedly::API::Object::PaymentMethodSpreedly
+Category : COMMUNICATION.SpreedlyStripe.getGatewayCredentials
+in File  : /srv/epages/eproot/Cartridges/DE_EPAGES/Spreedly/API/Object/PaymentMethodSpreedly.pm
+at Line  : 265
+Message  : $CheckEpagesJConnection1 = 'HTTP request failed: 422 Unprocessable Entity.
+Request:
+GET http://vm-hsilva.intern.epages.de:8088/rs/payments/spreedly/gateways?shopId=5A70640F-922C-A673-14C8-AC1545464829&gatewayName=stripe
+
+
+Response:
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 422 </title>
+</head>
+<body>
+<h2>HTTP ERROR: 422</h2>
+<p>Problem accessing /rs/payments/spreedly/gateways. Reason:
+<pre>    Unprocessable Entity</pre></p>
+<hr /><i><small>Powered by Jetty://</small></i>
+</body>
+</html>
+';
+Context : {"LanguageID":"2","ActionType":"ViewAction","SitePath":"/Shops/DemoShop","CurrencyID":"GBP","ActionPath":"/Classes/PaymentMethodSpreedlyStripe/Actions/MBO-ViewSettings","LocaleID":"en_GB","ObjectPath":"/Shops/DemoShop/PaymentMethods/DebitCreditCard_1","UserPath":"/Shops/DemoShop/Users/admin"}
+
+---
+
