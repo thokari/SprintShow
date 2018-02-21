@@ -18,7 +18,7 @@ task getIssueData {
     group 'JIRA'
     description 'Get data for JIRA issues'
     ext {
-        issues = project.getProperty('issueIds')
+        issues = project.hasProperty('issueIds') ? project.getProperty('issueIds') : ''
         templateFile = file 'templates/jiratasks.tmpl.js'
         outputFile = file 'scripts/jiratasks.js'
     }
@@ -31,7 +31,6 @@ task getIssueData {
                 jql: URLEncoder.encode("id in (${issues})")
             ]
         )
-
         def transformedIssues = response.issues.collect {
             [
                 id: it.key,

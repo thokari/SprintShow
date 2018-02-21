@@ -39,13 +39,17 @@ def httpRequest(final Map opts) {
     curlCommandLineArgs += urlArg
     def curlCommand = curlCommandLineArgs.join(' ')
     println "Executing command: $curlCommand"
+    def out = new ByteArrayOutputStream()
+    def err = new ByteArrayOutputStream()
     def process = curlCommand.execute()
+    process.consumeProcessOutput(out, err)
     process.waitFor()
+    println 'Done!'
     if (process.exitValue()) {
         logger.warn('\033[1;33mWARNING: Could not make HTTP call.\033[0m')
         throw new StopActionException()
     }
-    def result = process.text
+    def result = out.toString()
     try {
         return new JsonSlurper().parseText(result)
     } catch (e) {
