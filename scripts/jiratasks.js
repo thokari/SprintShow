@@ -1,59 +1,48 @@
 define(function () {
     return [
     {
-        "id": "AD-8509",
-        "name": "DHL Versenden: truncate all fields according to the WSDL file",
-        "type": "Bug",
-        "summary": "",
-        "priority": "Critical",
-        "integrated": "7.21.0",
-        "platform": "ePages6",
-        "links": [
-        ]
-    },
-    {
-        "id": "AD-8564",
-        "name": "DHL: Use new pricelist",
-        "type": "Task",
+        "id": "AD-8501",
+        "name": "Paypal Plus: Integrated signup to onboard merchant",
+        "type": "Epic",
         "summary": "",
         "priority": "Major",
-        "integrated": "7.21.0",
+        "integrated": "7.22.0",
         "platform": "ePages6",
         "links": [
-             "<a href='https://barcelona.epages.systems/epages/DemoShop.admin/?ViewAction=MBO-ViewGeneral&ObjectID=21339&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePages6</a>",
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3ADHL' target='_blank'>Coverage</a>"
-        ]
-    },
-    {
-        "id": "AD-8585",
-        "name": "Epages-ui not appearing in epagesj access logs",
-        "type": "Bug",
-        "summary": "",
-        "priority": "Major",
-        "integrated": "7.21.0",
-        "platform": "ePagesJ",
-        "links": []
-    },
-    {
-        "id": "AD-8524",
-        "name": "PayPalPlus: onboarding disconnect button",
-        "type": "Task",
-        "summary": "",
-        "priority": "Major",
-        "integrated": "7.21.0",
-        "platform": "ePages6",
-        "links": [
-            "<a href='https://demounity.barcelona.epages.systems/epages/demounity.admin/?ObjectID=21281&ViewAction=MBO-ViewSettings&merchantId=5A7B248F-C17E-4AFA-0D8C-D5809207320C&merchantIdInPayPal=UEZTTSXNRMJHN&productIntentID=ppplus&accountStatus=BUSINESS_ACCOUNT&isEmailConfirmed=true&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePagesNow</a>",
+            "<a href='https://teamred-06.vm-intern.epages.com/epages/DemoShop.admin/?ViewAction=MBO-ViewGeneral&ObjectID=21339&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePages6</a>",
             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3APayPalPlus' target='_blank'>Coverage</a>"
         ]
     },
     {
-        "id": "AD-8587",
-        "name": "Clarify test and documentation for epagesj image upload",
+        "id": "UNITY-4050",
+        "name": "Ingenico landing page",
         "type": "Task",
         "summary": "",
         "priority": "Major",
-        "integrated": "7.21.0",
+        "integrated": "7.22.0",
+        "platform": "ePages6",
+        "links": [
+             "<a href='https://teamred-06.vm-intern.epages.com/epages/DemoShop.admin/?ViewAction=MBO-ViewGeneral&ObjectID=21339&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePages6</a>",
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3ADHL' target='_blank'>Coverage</a>"
+        ]
+    },
+    {
+        "id": "AD-8664",
+        "name": "Service access is only secured by html element disabled and TLE",
+        "type": "Bug",
+        "summary": "",
+        "priority": "Critical",
+        "integrated": "7.22.0",
+        "platform": "ePages6",
+        "links": []
+    },
+    {
+        "id": "AD-8624",
+        "name": "Investigate decreased search response time",
+        "type": "Research",
+        "summary": "",
+        "priority": "Major",
+        "integrated": "7.22.0",
         "platform": "ePagesJ",
         "links": [
             "<a href='https://developer.epages.com/apps/api-reference/post-shopid-products-productid-slideshow.html' target='_blank'>API Documentation</a>",
@@ -61,33 +50,13 @@ define(function () {
         ]
     },
     {
-        "id": "AD-8598",
-        "name": "Stabilize the Shop Wizard in ESF tests",
-        "type": "Bug",
-        "summary": "",
-        "priority": "Blocker",
-        "integrated": "7.21.0",
-        "platform": "ePages6",
-        "links": []
-    },
-    {
-        "id": "AD-8604",
-        "name": "Product creation search delay increased in REST API tests",
-        "type": "Bug",
+        "id": "UNITY-4574",
+        "name": "Change REST Limit handling in J",
+        "type": "Task",
         "summary": "",
         "priority": "Major",
-        "integrated": "7.21.0",
+        "integrated": "7.22.0",
         "platform": "ePagesJ",
-        "links": []
-    },
-    {
-        "id": "AD-8606",
-        "name": "Logging General context",
-        "type": "Improvement",
-        "summary": "",
-        "priority": "Major",
-        "integrated": "7.21.0",
-        "platform": "ePages6",
         "links": [
             "<a href='img/communication.log' target='_blank'>Log</a>",
             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3APresentation' target='_blank'>Coverage</a>",
