@@ -40,26 +40,22 @@ define(function () {
         "id": "AD-8624",
         "name": "Investigate decreased search response time",
         "type": "Research",
-        "summary": "",
+        "summary": "<ul><li>measured search delay with different configuration values</li><li>enhanced test code with a configurable timeout</li></ul>",
         "priority": "Major",
         "integrated": "7.22.0",
         "platform": "ePagesJ",
         "links": [
-            "<a href='https://developer.epages.com/apps/api-reference/post-shopid-products-productid-slideshow.html' target='_blank'>API Documentation</a>",
-            "<a href='https://github.com/ePages-de/rat/blob/develop/src/test/groovy/com/epages/rat/test/product/steps/ProductImageSteps.groovy#L35-L64' target='_blank'>GitHub</a>",
         ]
     },
     {
         "id": "AD-7723",
         "name": "Automated setup of development machine",
         "type": "Story",
-        "summary": "",
+        "summary": "<ul><li>used existing script to setup development environment from scratch</li><li>second time executed on a Debian / Ubuntu machine</li><li>onboarding time: five hours for two developers</li></ul>",
         "priority": "Major",
         "integrated": "7.22.0",
         "platform": "ePages6",
         "links": [
-            "<a href='https://developer.epages.com/apps/api-reference/post-shopid-products-productid-slideshow.html' target='_blank'>API Documentation</a>",
-            "<a href='https://github.com/ePages-de/rat/blob/develop/src/test/groovy/com/epages/rat/test/product/steps/ProductImageSteps.groovy#L35-L64' target='_blank'>GitHub</a>",
         ]
     },
     {
