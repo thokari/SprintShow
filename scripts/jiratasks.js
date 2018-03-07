@@ -23,7 +23,7 @@ define(function () {
         "platform": "ePages6",
         "links": [
              "<a href='https://teamred-06.vm-intern.epages.com/epages/DemoShop.admin/?ViewAction=MBO-ViewGeneral&ObjectID=21339&ChangeAction=SaveLoginForm&Login=admin&Password=admin' target='_blank'>MBO ePages6</a>",
-             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3ADHL' target='_blank'>Coverage</a>"
+             "<a href='http://easy.vm-intern.epages.com:9000/component_measures/metric/coverage/history?id=DE_EPAGES%3A%3AOgone' target='_blank'>Coverage</a>"
         ]
     },
     {
@@ -44,6 +44,19 @@ define(function () {
         "priority": "Major",
         "integrated": "7.22.0",
         "platform": "ePagesJ",
+        "links": [
+            "<a href='https://developer.epages.com/apps/api-reference/post-shopid-products-productid-slideshow.html' target='_blank'>API Documentation</a>",
+            "<a href='https://github.com/ePages-de/rat/blob/develop/src/test/groovy/com/epages/rat/test/product/steps/ProductImageSteps.groovy#L35-L64' target='_blank'>GitHub</a>",
+        ]
+    },
+    {
+        "id": "AD-7723",
+        "name": "Automated setup of development machine",
+        "type": "Story",
+        "summary": "",
+        "priority": "Major",
+        "integrated": "7.22.0",
+        "platform": "ePages6",
         "links": [
             "<a href='https://developer.epages.com/apps/api-reference/post-shopid-products-productid-slideshow.html' target='_blank'>API Documentation</a>",
             "<a href='https://github.com/ePages-de/rat/blob/develop/src/test/groovy/com/epages/rat/test/product/steps/ProductImageSteps.groovy#L35-L64' target='_blank'>GitHub</a>",
