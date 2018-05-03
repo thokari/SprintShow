@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <title class="SprintName">...</title>
+ <title class="SprintName">Sprint Review #</title>
  <meta name="apple-mobile-web-app-capable" content="yes" />
  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -10,6 +10,11 @@
 
  <link rel="stylesheet" href="bower_components/reveal-js/css/reveal.min.css">
  <link rel="stylesheet" href="bower_components/reveal-js/css/theme/night.css" id="theme">
+ <style>
+ .reveal .controls .navigate-down, .reveal .controls .navigate-up {
+    display: none;
+}
+ </style>
 			<!--[if lt IE 9]>
 				<script src="lib/js/html5shiv.js"></script>
        <![endif]-->
@@ -19,16 +24,18 @@
        <div class="slides">
         <!-- start -->
         <section>
-          <h2>Sprint Review 4</h2>
-          <h3><span id="TeamName"></span>&#x221e; Team Infinity &#x221e;</h3>
+          <h2>Sprint Review #</h2>
+          <h4><span id="TeamName"></span>&#x221e; Team Infinity &#x221e;</h4>
           <img style="background:none; border:none; box-shadow:none;" src="img/teaminfinitylogo.png"/>
-          <h3 class="SprintName">ePages<font color="red">6</font> &amp; ePages<font color="red">J</font></h3>
+          <h3 class="SprintName">ePages<font color="red" style="">6</font> &amp; ePages<font color="red">J</font> &amp; ePages<font color="red">Now</font></h3>
         </section>
-        <!-- jira task -->
         <section>
-          <h2>Sprint Goals</h2>
+        
+          <h2>Sprint Goal</h2>
           <ul class="sprint_goals">
-            <li>Performance & Behavioral improvements for ePages Now!</li>
+            <pre><code>
+              <h3>put here the goals of the sprint</h3>
+            </code></pre>
           </ul>
         </section>
         <!-- task distribution -->
@@ -50,23 +57,6 @@
           <button id="typeTotal">Total</button>
           <button id="typeEpj">ePagesJ</button>
         </section>
-        <!-- history
-        <section>
-          <h3>Last sprints</h3>
-          <p>History</p>
-          <table>
-            <tr>
-              <td>
-                <canvas id="history" width="900" height="600"></canvas>
-              </td>
-              <td>
-                <canvas id="historyLegend" width="300" height="370"></canvas>
-              </td>
-            </tr>
-          </table>
-        </section> -->
-        <!-- jira task -->
-        <!-- end -->
       </div>
     </div>
     <script data-main="presentation" src="lib/require.js"></script>

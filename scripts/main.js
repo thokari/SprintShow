@@ -37,7 +37,7 @@ define([
 			},
 			legend: {
 				position: 'bottom',
-				labels: { 
+				labels: {
 					fontColor: 'white',
 					fontSize: 16,
 					padding: 36
@@ -145,38 +145,58 @@ define([
 
 			return filteredJiraTasks;
 		};
+		var addMinorTasksList = function (){
+			var minorTasksList = defineFilteredTaskDistributionData( function (elem) {
+				return elem.relevance == "minor";
+			});
+			var minorTasksText = "<section><h3>Minor Tasks</h3>";
+			for(var j = 0; j < minorTasksList.length; j++){
+				var issueImg = "<img height='16px' style='background:none; border:none; box-shadow:none; padding: 0px; margin: 2px;' src='img/" + minorTasksList[j].priority + ".svg'/>";
+				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + minorTasksList[j].id + "'>" + minorTasksList[j].id + "</a>";
+				minorTasksText += "<p style='font-size: 25px;'>"+ issueImg + jiraLinkId +" : "+minorTasksList[j].name+"</p>";
+
+			}
+			minorTasksText += "</section>";
+			document.getElementsByClassName('slides')[0].innerHTML += minorTasksText;
+		}
 
 		var addJiraSlidesToPresentations = function () {
 
 			var filteredJiraTasks = defineFilteredTaskDistributionData( function (elem) {
-				return elem.type != "Bug";
+				return elem.relevance != "minor";
 			});
 
+
+			addMinorTasksList();
 			var totalTasksCount = filteredJiraTasks.length;
 			var magicColorIndex = textColorGroupIndex;
 
 			for (var i = 0; i < totalTasksCount ; i++) {
 
-				var issueImg = "<img height='30px' style='background:none; border:none; box-shadow:none; padding-left: 10px;' src='img/" + filteredJiraTasks[i].priority + ".svg'/>";
+				var issueImg = "<img height='32px' style='background:none; border:none; box-shadow:none; padding: 0px; margin: 0px;' src='img/" + filteredJiraTasks[i].priority + ".svg'/>";
 
 				var jiraLinkId = "<a target='_blank' href='https://epages.atlassian.net/browse/" + filteredJiraTasks[i].id + "'>" + filteredJiraTasks[i].id + "</a>";
 
-				var contentText = "<section><h2>" + issueImg + "<font color='" + prettyColors[i + magicColorIndex] + "'>" + jiraLinkId + "</font><br>"  + filteredJiraTasks[i].name + "</h2>" + "<p> <font color='" + prettyColors[i + magicColorIndex + 1 ] + "'>" + filteredJiraTasks[i].summary + "</font>";
-
-				if (filteredJiraTasks[i].links) {
-					contentText += "</p>" + "<p>" + filteredJiraTasks[i].links[0];
-					if (filteredJiraTasks[i].links[1]) {
-						contentText += "&nbsp;&nbsp;&nbsp;" + filteredJiraTasks[i].links[1];
-					}
+				var contentText = "<section><h3>" + issueImg + "<font color='" + prettyColors[i + magicColorIndex] + "'>" + jiraLinkId + "</font></h3><h4>"  + filteredJiraTasks[i].name + "</h4>" + "<p> <font color='" + prettyColors[i + magicColorIndex + 1 ] + "'>" + filteredJiraTasks[i].summary + "</font>";
+				contentText += "<p style='white-space: nowrap;'>"
+				for (var j = 0; j < filteredJiraTasks[i].links.length ; j++) {
+						contentText += "<span >" + filteredJiraTasks[i].links[j];
+						if((j+1) != filteredJiraTasks[i].links.length) {
+							if(j != 0 && j % 2 == 0){
+								contentText += "</br>"
+							}else{
+							    contentText += "<span style='padding-left: 5px; padding-right: 5px;'>|</span>"
+							}
+						}
+						contentText += "</span>"
 				}
-
 				contentText += "</p>" + "</section>";
 
 				document.getElementsByClassName('slides')[0].innerHTML += contentText;
 			}
 
-			var futureConsiderations = "<section><h2>Roadmap September to November</h2><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
-			document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions? <br>&<br> Thank yous!</h3></section>";
+			var futureConsiderations = "<section><h3>Roadmap</h3><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
+			document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions?</h3></section>";
 
 		};
 
@@ -185,11 +205,11 @@ define([
 			addJiraSlidesToPresentations();
 
 			Reveal.initialize({
-				controls: false,
+				controls: true,
 				progress: true,
 				history: true,
 				center: true,
-				transition: 'none', // none/fade/slide/convex/concave/zoom
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 			});
 
 			Reveal.addEventListener( 'slidechanged', function( event ) {
@@ -220,7 +240,7 @@ define([
 				defineFilteredTaskDistributionData(function (elem) {
 					return elem.platform == "ePagesJ";
 				});
-				renderPriorityDistributionChart();	
+				renderPriorityDistributionChart();
 			});
 
 			document.getElementById('priorityTotal').addEventListener('click', function() {
@@ -228,7 +248,7 @@ define([
 				defineFilteredTaskDistributionData(function (elem) {
 					return true;
 				});
-				renderPriorityDistributionChart();	
+				renderPriorityDistributionChart();
 			});
 
 			document.getElementById('typeEp6').addEventListener('click', function() {
@@ -244,7 +264,7 @@ define([
 				defineFilteredTaskDistributionData(function (elem) {
 					return elem.platform == "ePagesJ";
 				});
-				renderTypeDistributionChart();	
+				renderTypeDistributionChart();
 			});
 
 			document.getElementById('typeTotal').addEventListener('click', function() {
@@ -252,7 +272,7 @@ define([
 				defineFilteredTaskDistributionData(function (elem) {
 					return true;
 				});
-				renderTypeDistributionChart();	
+				renderTypeDistributionChart();
 			});
 		}();
 	});

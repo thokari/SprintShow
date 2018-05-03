@@ -1,3 +1,5 @@
+/.project
+/.settings
+/.gradle
 bower_components
 *.*~
-/.project

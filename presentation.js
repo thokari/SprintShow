@@ -1,13 +1,13 @@
-var bowerLibary = '../bower_components';
+var bowerLibrary = '../bower_components';
 requirejs.config({
     baseUrl: 'lib',
     paths: {
         scripts: '../scripts',
         charts: '../scripts/charts',
-        chartJS: bowerLibary + '/Chart.js/dist/Chart',
-        randomColor: bowerLibary + '/randomcolor/randomColor',
-        revealJS: bowerLibary + '/reveal-js/js/reveal.min',
-	jquery: bowerLibary + '/jquery/dist/jquery.min'
+        chartJS: bowerLibrary + '/Chart.js/dist/Chart',
+        randomColor: bowerLibrary + '/randomcolor/randomColor',
+        revealJS: bowerLibrary + '/reveal-js/js/reveal.min',
+	jquery: bowerLibrary + '/jquery/dist/jquery.min'
     }
 });
 
