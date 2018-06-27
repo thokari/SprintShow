@@ -195,8 +195,10 @@ define([
 				document.getElementsByClassName('slides')[0].innerHTML += contentText;
 			}
 
-			var futureConsiderations = "<section><h3>Roadmap</h3><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
-			document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions?</h3></section>";
+            var talismas = "<section><h3>Talisma Tickets</h3><p>8 fixed tickets:</p><p><i>Google-Shopping (793-737)</br>Paypal Express (794-273)</br>Paypal Plus (787-328, 793-939)</br>DHL Versenden (794-233)</br>Amazon (794-577, 794-885)</br>Search (794-763)</i></p></section>";
+            var futureConsiderations = "";
+			//var futureConsiderations = "<section><h3>Roadmap</h3><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
+			document.getElementsByClassName('slides')[0].innerHTML += talismas + futureConsiderations + "<section><h3>Questions?</h3></section>";
 
 		};
 
