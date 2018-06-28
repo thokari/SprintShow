@@ -10,7 +10,7 @@ define(function () {
         "platform": "ePages6",
         "relevance": "major",
         "links": [
-
+            "<p>Some numbers:<br>Setup including installation from scratch: ~26 minutes<br>Start from Vagrant box including download: ~15 minutes<br>Start from Vagrant with box already downloaded: ~1 minute</p>"
         ]
     },
     {
