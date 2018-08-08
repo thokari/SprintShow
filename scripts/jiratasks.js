@@ -8,7 +8,7 @@ define(function () {
         "priority": "Major",
         "integrated": null,
         "platform": "ePages6",
-        "relevance": "minor",
+        "relevance": "",
         "links": [
 
         ]
@@ -21,7 +21,7 @@ define(function () {
         "priority": "Major",
         "integrated": "7.27.0",
         "platform": "ePages6",
-        "relevance": "minor",
+        "relevance": "",
         "links": [
 
         ]
@@ -34,7 +34,7 @@ define(function () {
         "priority": "Major",
         "integrated": null,
         "platform": "ePages6",
-        "relevance": "minor",
+        "relevance": "",
         "links": [
 
         ]
@@ -47,7 +47,7 @@ define(function () {
         "priority": "Blocker",
         "integrated": null,
         "platform": "ePages6",
-        "relevance": "minor",
+        "relevance": "",
         "links": [
 
         ]
@@ -60,7 +60,7 @@ define(function () {
         "priority": "Major",
         "integrated": "7.27.0",
         "platform": "ePages6",
-        "relevance": "minor",
+        "relevance": "",
         "links": [
 
         ]

@@ -1,8 +1,9 @@
 define([
-    "./jiratasks",
+    "./jiratasks.js",
+    "./talisma-tickets.js",
     "chartJS",
     "randomColor",
-], function(jiraTasks, Chart, randomColor) {
+], function(jiraTasks, talismaTickets, Chart, randomColor) {
 
     var tasksCount = 0;
     var tasksTypeDistribution = {};
@@ -166,7 +167,6 @@ define([
             return elem.relevance != "minor";
         });
 
-
         addMinorTasksList();
         var totalTasksCount = filteredJiraTasks.length;
         var magicColorIndex = textColorGroupIndex;
@@ -194,17 +194,32 @@ define([
 
             document.getElementsByClassName('slides')[0].innerHTML += contentText;
         }
+        //"<section><h3>Talisma Tickets</h3><p>8 fixed tickets:</p><p><i>Google-Shopping (793-737)</br>Paypal Express (794-273)</br>Paypal Plus (787-328, 793-939)</br>DHL Versenden (794-233)</br>Amazon (794-577, 794-885)</br>Search (794-763)</i></p></section>";
+    };
 
-        var talismas = "<section><h3>Talisma Tickets</h3><p>8 fixed tickets:</p><p><i>Google-Shopping (793-737)</br>Paypal Express (794-273)</br>Paypal Plus (787-328, 793-939)</br>DHL Versenden (794-233)</br>Amazon (794-577, 794-885)</br>Search (794-763)</i></p></section>";
-        var futureConsiderations = "";
-        //var futureConsiderations = "<section><h3>Roadmap</h3><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
-        document.getElementsByClassName('slides')[0].innerHTML += talismas + futureConsiderations + "<section><h3>Questions?</h3></section>";
-
+    var addTalismaTicketsToPresentation = function() {
+        var talismaSection = document.querySelector('#talisma-section');
+        var talismaCount = talismaSection.content.querySelector('#talisma-count');
+        var talismaList = talismaSection.content.querySelector('#talisma-list');
+        talismaCount.textContent = Object.keys(talismaTickets).length;
+        for(ticketId in talismaTickets) {
+            var entry = document.createElement('li');
+            var italic = document.createElement('i');
+            italic.textContent = talismaTickets[ticketId] + " (" + ticketId + ")";
+            entry.appendChild(italic);
+            talismaList.appendChild(entry);
+        }
+        document.querySelector('.slides').appendChild(talismaSection.content.cloneNode(true));
     };
 
     return function() {
 
         addJiraSlidesToPresentations();
+        addTalismaTicketsToPresentation();
+
+        var futureConsiderations = "";
+        //var futureConsiderations = "<section><h3>Roadmap</h3><img style='background:none; border:none; box-shadow:none;' src='img/roadmap.png'/></section>";
+        document.getElementsByClassName('slides')[0].innerHTML += futureConsiderations + "<section><h3>Questions?</h3></section>";
 
         Reveal.initialize({
             controls: true,
