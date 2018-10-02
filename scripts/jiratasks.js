@@ -1,68 +1,30 @@
 define(function () {
     return [
     {
-        "id": "AD-8863",
-        "name": "Figure out appropriate DNS setup for VirtualBox",
-        "type": "Research",
-        "summary": "",
-        "priority": "Major",
-        "integrated": null,
-        "platform": "ePages6",
-        "relevance": "",
-        "links": [
-
-        ]
-    },
-    {
-        "id": "AD-8818",
-        "name": "REST API: publish payment related information as an order lineitem ",
-        "type": "Story",
-        "summary": "",
-        "priority": "Major",
-        "integrated": "7.27.0",
-        "platform": "ePages6",
-        "relevance": "",
-        "links": [
-
-        ]
-    },
-    {
-        "id": "AD-8504",
-        "name": "DHL: (re)activate ESF Test eP6",
-        "type": "Sub-task",
-        "summary": "",
-        "priority": "Major",
-        "integrated": null,
-        "platform": "ePages6",
-        "relevance": "",
-        "links": [
-
-        ]
-    },
-    {
-        "id": "AD-8907",
-        "name": "epagesj: create new \"epages-ui\" client",
+        "id": "UNITY-4975",
+        "name": "Limit token scope for epages-ui client",
         "type": "Task",
         "summary": "",
-        "priority": "Blocker",
-        "integrated": null,
+        "priority": "Critical",
+        "integrated": "7.29.0",
         "platform": "ePages6",
-        "relevance": "",
+        "relevance": "major",
         "links": [
-
         ]
     },
     {
-        "id": "AD-8889",
-        "name": "List Packlink higher than native So Colissimo and Chronopost",
+        "id": "AD-8937",
+        "name": "epagesj: Limit concurrent requests per Shop",
         "type": "Task",
         "summary": "",
-        "priority": "Major",
-        "integrated": "7.27.0",
+        "priority": "Critical",
+        "integrated": "7.29.0",
         "platform": "ePages6",
-        "relevance": "",
+        "relevance": "major",
         "links": [
-
+            '<a href="http://teamred-jenkins.vm-intern.epages.com:8080/userContent/categoryrequests-1536323026808/index.html">Current version / no limits</a></br>',
+            '<a href="http://teamred-jenkins.vm-intern.epages.com:8080/userContent/categoryrequests-1536319192567/index.html">epagesj-7.27.5-shopratelimit4 / 0 maxThreadsPerShop (unlimited)</a></br>',
+            '<a href="http://teamred-jenkins.vm-intern.epages.com:8080/userContent/categoryrequests-1536322298342/index.html">epagesj-7.27.5-shopratelimit4 / 20 maxThreadsPerShop</a></br>'
         ]
     }
 ]
